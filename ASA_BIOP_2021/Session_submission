@@ -1,0 +1,49 @@
+ASA BIOP Session Submission
+
+
+Session Type: 
+Parallel Session
+
+Session Subtype: 
+Paper 
+
+Sponsor:  Biopharmaceutical Section
+
+Session Title: 
+Tools to enable the use of R by the bio-pharmaceutical industry in a regulatory setting
+
+Session Description: 
+This session aims to discuss different tools to support R-based submissions in a biopharmaceutical regulatory setting. Special attention given to the validation of the software.
+Statistical analysis software used for new drug applications in the biopharmaceutical regulatory setting has to fulfill specific requirements. Although the SAS programming language is the current standard, the food and drug administration (FDA) does not require use of any specific software for statistical analyses. 
+The FDA provides a clear definition of validation (see Glossary of Computer System Software Development Terminology), which can be broken down into three core components: accuracy, reproducibility, and traceability. Having these three components in mind, we present ideas and suggestions reflecting the current thinking of the R Validation Hub working group and collaboration partners, which is a cross-industry initiative funded by the R Consortium. Our mission is the support the adoption of R within a biopharmaceutical regulatory setting. A comprehensive framework is discussed in a white paper (see A risk-based approach for assessing R package accuracy within a validated infrastructure). 
+For the risk assessment, we differentiate two types of R packages: 1) Core and recommended packages that are shipped with the basic installation and a rigorous software development lifecycle assures minimal risk, and 2) Contributed packages that may vary in their accuracy and development rigor, which could be assessed by various metrics. We focus our attention on validating contributed packages.
+We present some of the tools that provide workflow to evaluate the quality of a set of R packages: The R package riskmetric, an associated shiny application to perform risk assessments, and discuss things to consider when testing R packages. Lastly, we offer some insights into standard tables for submissions and the r2rtf package. 
+
+Session structure
+
+Chair: Juliane Manitz (EMD Serono)
+
+Speakers:
+???	Andy Nicholls (GSK) and Paulo Bargo (Janssen R&D): A Risk-based approach for assessing R package accuracy within a validated infrastructure (20 minutes)
+???	Douglas Kelkhoff (Roche/Genentech): A workflow to evaluate the quality of a set of R packages using the R package riskmetric (20 minutes)
+???	Marly Gotti (Biogen): A case study: performing a risk assessment on the tidyverse package using the Risk Assessment Shiny Application (20 minutes)
+???	Keaven Anderson (Merck & Co): Considerations for Testing of R packages (20 minutes)  
+???	Yilong Zhang (Merck & Co): r2rtf - a lightweight R package to produce submission-ready tables and figures in RTF format (20min)
+
+Affiliation and email address for each participant
+???	Juliane Manitz, EMD Serono, juliane.manitz@emdserono.com 
+???	Marly Gotti, Biogen, marly.cormar@biogen.com
+???	Andy Nichols, GSK, andy.p.nicholls@gsk.com 
+???	Paulo Bargo (Janssen R&D), pbargo@its.jnj.com
+???	Douglas Kelkhoff, Roche/Genentech, kelkhoff.douglas@gene.com 
+???	Keaven Anderson (Merck & Co): keaven_anderson@merck.com
+???	Yilong Zhang, Merck & Co, yilong.zhang@merck.com 
+
+Session organizer(s): 
+???	Marly Gotti (Biogen) 
+???	Juliane Manitz (EMD Serono)
+
+Session chair: 
+Juliane Manitz (EMD Serono)
+
+
