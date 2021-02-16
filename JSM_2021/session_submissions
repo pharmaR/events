@@ -1,73 +1,134 @@
-JSM 2021 Session Overview 
+JSM Session Submission
+------------------------
 
-Session Type:	Topic Contributed Papers
-Session Sponsor:	Biopharmaceutical Section
-Session Title:	Tools to enable the use of R by the bio-pharmaceutical industry in a regulatory setting		
-Session Organizer: 	Juliane Manitz; Marly Gotti		
-Session: Chair:	Juliane Manitz		
+Session Type:	Topic Contributed
+Sub Type:	Papers
+Sponsor 1:	Biopharmaceutical Section
+Sponsor 2:	Biopharmaceutical Section
+Sponsor 3:	Biopharmaceutical Section
 
+Title:	Tools to enable the use of R by the bio-pharmaceutical industry in a regulatory setting
 
-Abstract #1 (317506): A Risk-based approach for assessing R package accuracy within a validated infrastructure
-Abstract #2 (317498): A workflow to evaluate the quality of R packages using the R package riskmetric
-Abstract #3 (317411): A case study: performing a risk assessment on the tidyverse package using the Risk Assessment Shiny Application
-Abstract #4 (317480): Packages for automated assessment and standands alignment of R packages
-Abstract #5 (317189): r2rtf - a lightweight R package to produce submission-ready tables and figures in RTF format
+Session Description:	This topic-contributed session aims to discuss different initiatives to support R-based submissions in a biopharmaceutical regulatory setting. In particular, the following topics will be addressed:
+- Risk-based assessment of R package accuracy
+- Considerations for testing of R packages
+- Standard formatting for submission-ready tables
+Statistical analysis software used for new drug applications in the biopharmaceutical regulatory setting has to fulfill specific requirements. Special attention given to the validation of the software. The food and drug administration (FDA) provides a clear definition of validation (see Glossary of Computer System Software Development Terminology), which can be broken down into three core components: accuracy, reproducibility, and traceability.
+Having these three components in mind, we present ideas and suggestions reflecting the current thinking of the R Validation Hub working group and collaboration partners, which is a cross-industry initiative funded by the R Consortium. Our mission is the support the adoption of R within a biopharmaceutical regulatory setting. A comprehensive framework is discussed in a white paper (see A risk-based approach for assessing R package accuracy within a validated infrastructure).
+Although the SAS programming language is the current standard, the FDA does not require use of any specific software for statistical analyses. R is among the most widely used statistical software in the industry and academia. As an open-source software, it benefits from contributed packages developed and tested by scientists, statistical programmers, and the R community in general.
+For the risk assessment, we differentiate two types of R packages: 1) Core and recommended packages that are shipped with the basic installation and a rigorous software development lifecycle assures minimal risk, and 2) Contributed packages that may vary in their accuracy and development rigor, which could be assessed by various metrics. We focus our attention on validating contributed packages. We present some of the tools that provide workflow to evaluate the quality of a set of R packages: The R package riskmetric, an associated shiny application to perform risk assessments, and discuss things to consider when testing R packages. Lastly, we offer some insights into standard tables for submissions and the r2rtf package.
 
---------------------------------------------------------------------------------------------------
-Activity Number:	220593
-Type:	Topic Contributed
-Sponsor:	Biopharmaceutical Section
-Abstract #317506	
-Title:	A Risk-based approach for assessing R package accuracy within a validated infrastructure
-Author(s):	Paulo Bargo* and Juliane Manitz and Andy Nicholls and Doug Kelkhoff and Yilong Zhang and Lyn Taylor and Joe Rickert and Marly Gotti and Keaven M Andersen
-Companies:	Janssen R&D and EMD Serono and GSK and Roche and Merck & Co., Inc. and Phastar and R Consortium and Biogen and Merck & Co. Inc.
-Keywords:	validation ; risk assessment
-Abstract:	This contribution has the aim to discuss possible risk-based approaches to assess R package accuracy within a validated infrastructure. Ideas and suggestions reflect current thinking of the R Validation Hub working group, which is a cross-industry initiative funded by the R Consortium. R Validation Hub is a collaboration to support the adoption of R within a biopharmaceutical regulatory setting. In this setting, R is required to be part of a validated system, which encompasses software accuracy, reproducibility and traceability. We differentiate two types of R packages: Core and recommended packages are shipped with the basic installation. A rigorous software development lifecycle assures minimal risk. However, contributed packages may vary in their accuracy and development rigor, which could be assessed by various metrics. This cross-industry WG suggested several relevant quality metrics, and is developing an R package that provides a workflow to evaluate the quality of a set of R packages. This work may also be relevant in other regulated areas such as financial service industries and agriculture.
+Theme?:	No
+Applied?:	No
+Audience Size:	Large (150 -275)
+ 	
+Organizer Information    
 
-
---------------------------------------------------------------------------------------------------
-Activity Number:	220593
-Type:	Topic Contributed
-Sponsor:	Biopharmaceutical Section
-Abstract #317498	
-Title:	A workflow to evaluate the quality of R packages using the R package riskmetric
-Author(s):	Doug Kelkhoff*
-Companies:	Roche
-Keywords:	validation ; open source ; riskmetric ; R package
-Abstract:	Open source tools offer easier access to leading edge methods than ever before, but with that comes new risks of code quality that aren't addressed by familiar regulated industry practices. At the R Validation Hub, we offer the riskmetric package to help bridge that gap. riskmetric provides a platform for quantifying the quality of an R package, supporting risk-based validation of software opening the door for faster and more dynamic incorporation of open source tools into regulatory analysis.
-We will give a walkthrough of the riskmetric package, highlighting potential use cases ranging from scientific end users to systems administrators, and discuss how the package contributes one piece of the R Validation Hub's software strategy for advancing the role of open source tools in the biopharmaceutical clinical development process.
-
---------------------------------------------------------------------------------------------------
-Activity Number:	220593
-Type:	Topic Contributed
-Sponsor:	Biopharmaceutical Section
-Abstract #317411	
-Title:	A case study: performing a risk assessment on the tidyverse package using the Risk Assessment Shiny Application
-Author(s):	Marly Gotti*
-Companies:	Biogen
-Keywords:	risk assessment ; tidyverse ; R packages ; validation ; shiny application ; case study
-Abstract:	In this case study we perform a risk assessment of the tidyverse R package using the Risk Assessment Shiny Application. The risk assessment follows the philosophy of the R Validation Hub's white paper: https://www.pharmar.org/white-paper/.
-The Risk Assessment Shiny Application is an interactive web application that serves as an interface to the riskmetric package. It portraits the metrics coming from riskmetric, categorized into maintenance, community usage, and testing. The application can be used to record comments on the metrics, which are stored in an underlying database. This makes it possible to stop and start reviews at the reviewer's convenience. Once a review is complete, a final summary comment can be provided before a final decision is made on the package. In line with the white paper, the decision is an overall risk score: low, medium, or high. The reviewer is then able to generate either an HTML or a DOCX report containing the metrics, comments, and some additional high-level information about the package.
-Following the design of the application as described above, in conjunction with the white paper, we will go through a case study using the tidyverse package.
-Activity Number:	220593
-Type:	Topic Contributed
-Sponsor:	Biopharmaceutical Section
-Abstract #317480	
-Title:	Packages for automated assessment and standands alignment of R packages
-Author(s):	Mark Padgham* and Noam Ross
-Companies:	rOpenSci and Ecohealth Alliance
-Keywords:	R packages ; standards ; compliance ; validation ; automated assessment
-Abstract:	rOpenSci is currently expanding its system for peer-review of R packages to include packages implementing statistical algorithms. This talk will briefly present two new tools developed for our expansion of scope, in order to assess statistical packages. The first, the "autotest" package, automatically generates and executes tests on R packages by determining the types of each input parameter for each function, and then mutating both types and values. This can be used to document and confirm the robustness of software to unexpected inputs. The second tool, the "rssr" package, allows standards compliance to be integrated directly into R package code. Developers use a roxygen-like system to annotate code to record where and how specific standards standards are addressed, as well as providing context or explanation for no-compliance. The integration of standards within the code itself enables the automatic generation of detailed, explicit, and cross-linked reports on standards compliance.
+Name:	juliane manitz
+Organization:	EMD Serono
+Address_1:	45 MIddlesex Turnpike
+Address_2:	
+City/State/Zip/Country:	Billerica MA
 	
+Phone:	9788217726
+Fax:	
+Email:	juliane.manitz@emdserono.com
+ 	
+Chair Information    Edit
 
---------------------------------------------------------------------------------------------------
-Activity Number:	220593
-Type:	Topic Contributed
-Sponsor:	Biopharmaceutical Section
-Abstract #317189	
-Title:	r2rtf - a lightweight R package to produce submission-ready tables and figures in RTF format
-Author(s):	Yilong Zhang* and Siruo Wang and Simiao Ye and Madhusudhan Ginnaram and Keaven M Andersen
-Companies:	Merck & Co., Inc. and John Hopkins University and Merck & Co., Inc. and Merck & Co., Inc. and Merck & Co. Inc.
-Keywords:	clinical trials ; R ; RTF
-Abstract:	The use of open-source R is evolving in drug discovery, research and development for study design, data analysis, visualization, and report generation in the pharmaceutical industry. The ability to produce tables, listings and figures (TLFs) in customized rich text format (RTF) using R is crucial to enhance the workflow of using Microsoft Word to assemble analysis results. We developed an R package, r2rtf, that standardizes the approach to generate highly customized TLFs in RTF format. Code examples are provided to create customized RTF tables and figures with highlighted features. Based on the TLFs generated by r2rtf package, we further discuss a proposed process to submit the works to regulatory agency. The open-source r2rtf R package is available at: https://github.com/Merck/r2rtf.
+Name:	juliane manitz
+Organization:	EMD Serono
+Address_1:	45 MIddlesex Turnpike
+Address_2:	
+City/State/Zip/Country:	Billerica MA
+	
+Phone:	9788217726
+Fax:	
+Email:	juliane.manitz@emdserono.com
+ 	
+Discussant Information     Add Another Discussant
+
+Remove    Edit
+Role:
+Name:	Discussant
+Nicholls, Andy
+Organization:	GSK
+Address 1:	NA
+Address 2:	
+City/ST/Zip:	NA,
+Country:	
+Phone:	NA
+Fax:	
+Email:	andy.p.nicholls@gsk.com
+
+ 	
+Remove    Edit
+Role:
+Name:	Discussant
+Bargo, Paulo
+Organization:	Janssen R&D
+Address 1:	NA
+Address 2:	
+City/ST/Zip:	NA,
+Country:	
+Phone:	NA
+Fax:	
+Email:	pbargo@its.jnj.com
+
+ 	
+Remove    Edit
+Role:
+Name:	Discussant
+Kelkhoff, Douglas
+Organization:	Roche/Genentech
+Address 1:	NA
+Address 2:	
+City/ST/Zip:	NA,
+Country:	
+Phone:	NA
+Fax:	
+Email:	kelkhoff.douglas@gene.com
+
+ 	
+Remove    Edit
+Role:
+Name:	Discussant
+Gotti, Marly
+Organization:	Biogen
+Address 1:	NA
+Address 2:	
+City/ST/Zip:	NA,
+Country:	
+Phone:	NA
+Fax:	
+Email:	marly.cormar@biogen.com
+
+ 	
+Remove    Edit
+Role:
+Name:	Discussant
+Anderson, Keaven
+Organization:	Merck & Co
+Address 1:	NA
+Address 2:	
+City/ST/Zip:	NA,
+Country:	
+Phone:	NA
+Fax:	
+Email:	keaven_anderson@merck.com
+
+ 	
+Remove    Edit
+Role:
+Name:	Discussant
+Zhang, Yilong
+Organization:	Merck & Co
+Address 1:	NA
+Address 2:	
+City/ST/Zip:	NA,
+Country:	
+Phone:	NA
+Fax:	
+Email:	yilong.zhang@merck.com
+
 
