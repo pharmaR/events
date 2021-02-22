@@ -4,4 +4,4 @@
 - ASA BIOP: Session preselected
 - PSI: Session accepted, requires details
 - useR!: submission pending
-- NISS Meetup, 'Open access software in pharma'
+- NISS Meetup, 'Open access software in pharma': Accepted
