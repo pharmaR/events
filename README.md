@@ -9,7 +9,7 @@ Status: Session accepted
 
 Submission type: Contributed Session
 
-Presenters / Titles:
+Presenters / Titles (each 20mins):
 
 - Paulo Bargo (Abstract #317506): A Risk-based approach for assessing R package accuracy within a validated infrastructure
 - Doug Kelkhoff (Abstract #317498): A workflow to evaluate the quality of R packages using the R package riskmetric
@@ -31,10 +31,20 @@ Presenters / Titles:
 
 ## PSI
 
-June 21-23, 2021; 
+June 21-23, 2021;
 https://psiweb.org/conferences/about-the-conference
 
-Status: Session accepted, requires details
+Status: Session accepted
+
+Time: June 22, 3:30pm-5pm UK (i.e. 10:30am-12:00pm EST)
+
+Presenters / Titles (each 15mins):
+
+-	Andy Nicholls (GSK) and Paulo Bargo (Janssen R&D): A Risk-based approach for assessing R package accuracy within a validated infrastructure 
+-	Douglas Kelkhoff (Roche/Genentech): A workflow to evaluate the quality of a set of R packages using the R package riskmetric 
+-	Marly Gotti (Biogen): A case study: performing a risk assessment on the tidyverse package using the Risk Assessment Shiny Application 
+-	Keaven Anderson (Merck & Co): Considerations for Testing of R packages 
+-	Yilong Zhang (Merck & Co): r2rtf - a lightweight R package to produce submission-ready tables and figures in RTF format 
 
 ## useR!
 
