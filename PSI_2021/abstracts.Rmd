@@ -1,0 +1,68 @@
+---
+title: Aims/R Validation Hub Session
+output:
+  word_document: default
+  html_document: default
+---
+
+# Why attend?
+
+R is growing in popularity within industry but the lack of standard practices for incorporating open source software into GxP analysis workflows remain a barrier to adoption for many.  This session, AIMS SIG / R Validation Hub session presents practical methods for addressing open source risk within a validated infrastructure.
+
+# A Risk-based approach for assessing R package accuracy within a validated infrastructure
+
+**Speaker:**	Andy Nicholls (GSK)
+
+**Keywords:**	validation ; risk assessment
+
+## Abstract
+
+The R Validation Hub is a collaboration to support the adoption of R within a biopharmaceutical regulatory setting. In this setting, R is required to be part of a validated system, which encompasses software accuracy, reproducibility and traceability. We differentiate two types of R packages: *Base R* (Core and recommended) packages are shipped with the basic installation and follow a rigorous software development lifecycle assures minimal risk; and *contributed* packages, which vary in their accuracy and development rigor.  This talk describes the R Validation Hub's proposed risk-based approach for assessing R package accuracy within a validated infrastructure, as highlighted the [white paper](https://www.pharmar.org/white-paper/).
+
+
+# A workflow to evaluate the quality of R packages using the R package riskmetric
+
+**Speaker:**	Doug Kelkhoff (Genentech)
+
+**Keywords:**	validation ; open source ; riskmetric ; R package
+
+## Abstract	
+
+Open source tools offer easier access to leading edge methods than ever before, but with that comes new risks of code quality that aren't addressed by familiar regulated industry practices. At the R Validation Hub, we offer the [riskmetric](https://github.com/pharmaR/riskmetric) package to help bridge that gap. riskmetric provides a platform for quantifying the quality of an R package, supporting risk-based validation of software opening the door for faster and more dynamic incorporation of open source tools into regulatory analysis.
+We will give a walkthrough of the riskmetric package, highlighting potential use cases ranging from scientific end users to systems administrators, and discuss how the package contributes one piece of the R Validation Hub's software strategy for advancing the role of open source tools in the biopharmaceutical clinical development process.
+
+
+#	A case study: performing a risk assessment on the tidyverse package using the Risk Assessment Shiny Application
+
+**Speaker:**	Marly Gotti (Biogen)
+
+**Keywords:**	risk assessment ; tidyverse ; R packages ; validation ; shiny application ; case study
+
+## Abstract	
+
+In this case study we perform a risk assessment of the tidyverse R package using the Risk Assessment Shiny Application. The Risk Assessment Shiny Application is an interactive web application that serves as an interface to the riskmetric package. It portraits the metrics coming from riskmetric, categorized into maintenance, community usage, and testing. The application can be used to record comments on the metrics, which are stored in an underlying database. This makes it possible to stop and start reviews at the reviewer's convenience. Once a review is complete, a final summary comment can be provided before a final decision is made on the package. In line with the white paper, the decision is an overall risk score: low, medium, or high. The reviewer is then able to generate either an HTML or a DOCX report containing the metrics, comments, and some additional high-level information about the package.
+Following the design of the application as described above, in conjunction with the white paper, we will go through a case study using the tidyverse package.
+
+
+
+#	Packages for automated assessment and standands alignment of R packages
+
+**Speaker:** Mark Padgham (rOpenSci)
+
+**Keywords:**	R packages ; standards ; compliance ; validation ; automated assessment
+
+## Abstract	
+
+rOpenSci is currently expanding its system for peer-review of R packages to include packages implementing statistical algorithms. This talk will briefly present two new tools developed for our expansion of scope, in order to assess statistical packages. The first, the "autotest" package, automatically generates and executes tests on R packages by determining the types of each input parameter for each function, and then mutating both types and values. This can be used to document and confirm the robustness of software to unexpected inputs. The second tool, the "rssr" package, allows standards compliance to be integrated directly into R package code. Developers use a roxygen-like system to annotate code to record where and how specific standards standards are addressed, as well as providing context or explanation for no-compliance. The integration of standards within the code itself enables the automatic generation of detailed, explicit, and cross-linked reports on standards compliance.
+	
+
+#	r2rtf - a lightweight R package to produce submission-ready tables and figures in RTF format
+
+**Speaker:**	Yilong Zhang (MSD)
+
+**Keywords:**	clinical trials ; R ; RTF
+
+## Abstract	
+
+The use of open-source R is evolving in drug discovery, research and development for study design, data analysis, visualization, and report generation in the pharmaceutical industry. The ability to produce tables, listings and figures (TLFs) in customized rich text format (RTF) using R is crucial to enhance the workflow of using Microsoft Word to assemble analysis results. We developed an R package, r2rtf, that standardizes the approach to generate highly customized TLFs in RTF format. Code examples are provided to create customized RTF tables and figures with highlighted features. Based on the TLFs generated by r2rtf package, we further discuss a proposed process to submit the works to regulatory agency. The open-source r2rtf R package is available at: https://github.com/Merck/r2rtf.
+
