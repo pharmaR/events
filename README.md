@@ -7,6 +7,9 @@ https://www.niss.org/events/niss-merck-meet-open-source-software-pharma
 
 Status: 'Open access software in pharma': Accepted
 
+Slides: https://www.niss.org/file/niss202104andynichollspdf
+
+Recording: https://www.youtube.com/watch?v=RkNtyBOkJk8
 
 ## PSI
 
