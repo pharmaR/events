@@ -44,7 +44,7 @@ Status:
 July 5-9, 2021, virtual; 
 https://user2021.r-project.org/
 
-Status: Abstract submission pending
+Status: Abstract accepted
 
 Abstract submission deadline: Mar 15
 Presenter: Doug
