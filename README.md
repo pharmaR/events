@@ -77,7 +77,7 @@ https://ww2.amstat.org/meetings/biop/2021/
 Status: Session pre-selected
 
 Presenters / Titles:
-- Paul Schuette
+- Paul Schuette: R for Regulatory Submissions: Challenges and Approaches
 - Mark Padgham
 - RvalHub discussion panel: Representative TBC
 
