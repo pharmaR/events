@@ -1,0 +1,16 @@
+ABSTRACT
+--------------------
+Abstract ID: 303523
+Session Type: Parallel Session Topic: Other Session ID: 200833
+Title: Panel Discussion
+Abstract Text:
+Following the presentations by Paul Schuette and Mark Padgham, we would like to engage in an interactive discussion with the audience. Representatives from the R validation hub executive committee are joining the conversation. We hope to discuss different tools to support R-based submissions in a biopharmaceutical regulatory setting with special attention to the risk-based approach for assessing R package accuracy. We also would like to hear back from the audience about their experiences and questions.
+Generally, we differentiate two types of R packages: 1) Core and recommended packages that are shipped with the basic installation and a rigorous software development lifecycle assures minimal risk, and 2) Contributed packages that may vary in their accuracy and development rigor, which could be assessed by various metrics. The R validation hub focuses their attention on validating contributed packages. They have developed some of the tools that provide workflow to evaluate the quality of a set of R packages: The R package riskmetric, an associated shiny application to perform risk assessments, and discuss things to consider when testing R packages.
+
+
+Keywords: software validation, risk assessment, R package
+
+
+AUTHORS
+---------------------
+1: Manitz, Juliane - EMD Serono (presenting)2: Gotti, Marly  - Biogen 3: Nicholls, Andy - gsk 4: Bargo, Paulo - Janssen R&D 5: Kelkhoff, Douglas - Roche/Genentech 6: Anderson, Keaven - Merck & Co 7: Zhang, Yilong - Merck & Co 8: Rickert, Joseph - RStudio
