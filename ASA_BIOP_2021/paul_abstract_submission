@@ -1,0 +1,7 @@
+Abstract: BIOP2021
+
+Title: R for Regulatory Submissions: Challenges and Approaches
+Author: Paul Schuette
+
+Abtract: 
+As stated in FDA’s 2015 Statistical Software Clarifying Statement, FDA does not require the use a specific statistical software package for regulatory submissions.  This talk will address some of the challenges and potential solutions for using R in regulatory submissions.  Additionally, we shall briefly discuss initiatives to support R submissions such as those of the R Validation Hub, R Consortium efforts and TransCelerate’s recommendations for “Modernization of Statistical Analytics.”
