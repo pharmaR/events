@@ -75,12 +75,13 @@ Sept 21-23, 2021; Rockville MD;
 https://ww2.amstat.org/meetings/biop/2021/
 
 Status: Session pre-selected
+Title: Tools to Enable the Use of R by the Biopharmaceutical Industry in a Regulatory Setting
+Time slot: 9/24/2021, from 2:15:00 PM-3:30:00 PM ET.
 
 Presenters / Titles:
 - Paul Schuette: R for Regulatory Submissions: Challenges and Approaches
 - Mark Padgham
-- RvalHub discussion panel: Representative TBC
-
+- RvalHub discussion panel: Juliane Manitz, Marly Gotti, Andy Nicholls, Paulo Bargo, Douglas Kelkhoff, Keaven Anderson, Yilong Zhang, Joseph Rickert (Representative/s TBC)
 
 ## R/Medicine
 
