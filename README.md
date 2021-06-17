@@ -60,6 +60,8 @@ Status: Session accepted
 
 Submission type: Contributed Session
 
+Thursday, 8/12/2021, 4:00 PM EDT
+
 Presenters / Titles (each 20mins):
 
 - Paulo Bargo (Abstract #317506): A Risk-based approach for assessing R package accuracy within a validated infrastructure
