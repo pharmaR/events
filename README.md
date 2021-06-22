@@ -70,6 +70,15 @@ Presenters / Titles (each 20mins):
 - Mark Padgham (Abstract #317480): Packages for automated assessment and standands alignment of R packages
 - Yilong Zhang (Abstract #317189): r2rtf - a lightweight R package to produce submission-ready tables and figures in RTF format
 
+## R/Medicine
+
+August 24-27, 2021; Virtual
+https://r-medicine.org
+
+Status: Abstract Submitted
+Title: Performing Risk Assessments of R Package Accuracy using Shiny
+Abstract: In this presentation we introduce the Risk Assessment Shiny application and explain how it can be used to perform a risk assessment of R package accuracy within a validated infrastructure as required within a biopharmaceutical regulatory setting. The Risk Assessment Shiny Application is an interactive web application that serves as an interface to the riskmetric package. Both tools have been developed by the R validation hub, which is a cross-industry initiative funded by the R Consortium. The shiny application portraits the metrics coming from riskmetric, categorized into maintenance, community usage, and testing. The application can be used to record comments on the metrics, which are stored in an underlying database. This makes it possible to stop and start reviews at the reviewer’s convenience. Once a review is complete, a final summary comment can be provided before a final decision is made on the package. In line with the white paper, the decision is an overall risk score: low, medium, or high. The reviewer is then able to generate either an HTML or a DOCX report containing the metrics, comments, and some additional high-level information about the package.
+
 
 ## ASA BIOP 
 
