@@ -70,6 +70,7 @@ Presenters / Titles (each 20mins):
 - Mark Padgham (Abstract #317480): Packages for automated assessment and standands alignment of R packages
 - Yilong Zhang (Abstract #317189): r2rtf - a lightweight R package to produce submission-ready tables and figures in RTF format
 
+
 ## R/Medicine
 
 August 24-27, 2021; Virtual
@@ -93,10 +94,6 @@ Presenters / Titles:
 - Paul Schuette: R for Regulatory Submissions: Challenges and Approaches
 - Mark Padgham
 - RvalHub discussion panel: Juliane Manitz, Marly Gotti, Andy Nicholls, Paulo Bargo, Douglas Kelkhoff, Keaven Anderson, Yilong Zhang, Joseph Rickert (Representative/s TBC)
-
-## R/Medicine
-
-Status: Marly has been invited; confirmation pending
 
 
 ## Other Potential Conferences
