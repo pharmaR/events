@@ -83,7 +83,7 @@ Time slot: 9/24/2021, from 2:15:00 PM-3:30:00 PM ET.
 Presenters / Titles:
 - Paul Schuette: R for Regulatory Submissions: Challenges and Approaches
 - Mark Padgham
-- RvalHub discussion panel: Juliane Manitz, Marly Gotti, Andy Nicholls, Paulo Bargo, Douglas Kelkhoff, Keaven Anderson, Yilong Zhang, Joseph Rickert (Representative/s TBC)
+- Discussion panel: RvalHub Representatives Juliane Manitz, Keaven Anderson, Yilong Zhang
 
 ## R/Medicine
 
