@@ -46,9 +46,9 @@ https://user2021.r-project.org/
 
 Status: Abstract accepted
 
-Abstract submission deadline: Mar 15
 Presenter: Doug
-Title: TBA
+
+Title: R in Regulated Industries: Assessing Risk with {riskmetric}
 
 
 ## JSM 
