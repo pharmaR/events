@@ -60,7 +60,7 @@ Status: Session accepted
 
 Submission type: Contributed Session
 
-Thursday, 8/12/2021, 4:00 PM EDT
+Wed Aug 11, 1.30-3pm (EST).
 
 Presenters / Titles (each 20mins):
 
