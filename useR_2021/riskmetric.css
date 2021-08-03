@@ -1,0 +1,9 @@
+.title-slide {
+  background-image: url('assets/pharmaRlogo.png');
+  background-size: 40%
+}
+
+li {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
