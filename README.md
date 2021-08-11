@@ -67,7 +67,7 @@ Presenters / Titles (each 20mins):
 - Paulo Bargo (Abstract #317506): A Risk-based approach for assessing R package accuracy within a validated infrastructure
 - Doug Kelkhoff (Abstract #317498): A workflow to evaluate the quality of R packages using the R package riskmetric
 - Marly Gotti (Abstract #317411): A case study: performing a risk assessment on the tidyverse package using the Risk Assessment Shiny Application
-- Mark Padgham (Abstract #317480): Packages for automated assessment and standands alignment of R packages
+- Mark Padgham (Abstract #317480): Packages for automated assessment and standands alignment of R packages (https://mpadge.github.io/presentations/2021/JSM)
 - Yilong Zhang (Abstract #317189): r2rtf - a lightweight R package to produce submission-ready tables and figures in RTF format
 
 
