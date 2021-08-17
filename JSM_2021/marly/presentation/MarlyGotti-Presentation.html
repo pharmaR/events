@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>The Risk Assessment Shiny App</title>
+    <meta charset="utf-8" />
+    <script src="libs/header-attrs-2.8/header-attrs.js"></script>
+    <style type="text/css">
+      a,a>code{color:#13189f;text-decoration:none}.footnote{position:absolute;bottom:3em;padding-right:4em;font-size:90%}.remark-code-line-highlighted{background-color:#ff8}.inverse{background-color:#272822;color:#d6d6d6;text-shadow:0 0 20px #333}.inverse h1,.inverse h2,.inverse h3{color:#f3f3f3}.left-column{color:#777;width:20%;height:92%;float:left}.left-column h2:last-of-type,.left-column h3:last-child{color:#000}.right-column{width:75%;float:right;padding-top:1em}.pull-left{float:left;width:47%}.pull-right{float:right;width:47%}.pull-right~*{clear:both}iframe,img,video{max-width:100%}blockquote{border-left:solid 5px #d3d3d3;padding-left:1em}.remark-slide table{margin:auto;border-top:1px solid #666;border-bottom:1px solid #666}.remark-slide table thead th{border-bottom:1px solid #ddd}td,th{padding:5px}.remark-slide tfoot,.remark-slide thead,.remark-slide tr:nth-child(even){background:#eee}@page{margin:0}@media print{.remark-slide-scaler{width:100%!important;height:100%!important;transform:scale(1)!important;top:0!important;left:0!important}}body{font-family:'Droid Serif','Palatino Linotype','Book Antiqua',Palatino,'Microsoft YaHei','Songti SC',serif}h1,h2,h3{font-family:'Yanone Kaffeesatz';font-weight:400}.remark-code,.remark-inline-code{font-family:'Source Code Pro','Lucida Console',Monaco,monospace}.remark-slide-content{background-color:#fafafa;border-top:80px solid #2b6bc1;font-size:20px;font-weight:300;line-height:1.5;padding:1em 2em 1em 2em}.title-slide .inverse .remark-slide-content{background-color:#fafafa}.inverse{background-color:#2b6bc1;text-shadow:none}.remark-slide-content>h1{font-family:'Fira Sans';font-weight:400;font-size:45px;margin-top:-95px;margin-left:00px;color:#fafafa}.remark-slide-content>inverse{width:112px;height:47px;border-bottom:1px solid #000;position:absolute}.clear{border-top:0 solid #fafafa}.remark-slide-content>h2,h3,h4{padding-bottom:00px;color:#1a292c;text-shadow:none;font-weight:400;text-align:left;margin-left:00px;margin-bottom:-10px}.pull-left>h2,.pull-right>h2,.remark-slide-content>h2{font-size:35px}.pull-left>h3,.pull-left>h4,.pull-right>h3,.pull-right>h4,.remark-slide-content>h3,.remark-slide-content>h4{font-size:30px}.title-slide{background-color:#fafafa;border-top:80px solid #fafafa}.title-slide>h1{color:#1a292c;font-size:40px;text-shadow:none;font-weight:400;text-align:left;margin-left:15px;padding-top:80px}.title-slide>h2{margin-top:-25px;color:#1a292c;text-shadow:none;font-weight:300;font-size:35px;text-align:left;margin-left:15px}.title-slide>h3{color:#1a292c;text-shadow:none;font-weight:300;font-size:25px;text-align:left;margin-left:15px;margin-bottom:-30px}.remark-slide-number{font-size:13pt;font-family:'Fira Sans';color:#272822;opacity:1}.inverse .remark-slide-number{font-size:13pt;font-family:'Fira Sans';color:#fafafa;opacity:1}.title-slide .remark-slide-number{display:none}.remark-inline-code{background:#e7e8e2;border-radius:3px;padding:4px}.code10 .remark-code{font-size:10%}.code20 .remark-code{font-size:20%}.code30 .remark-code{font-size:30%}.code40 .remark-code{font-size:40%}.code50 .remark-code{font-size:50%}.code60 .remark-code{font-size:60%}.code70 .remark-code{font-size:70%}.code80 .remark-code{font-size:80%}.code90 .remark-code{font-size:90%}.code100 .remark-code{font-size:100%}.font10{font-size:10%}.font20{font-size:20%}.font30{font-size:30%}.font40{font-size:40%}.font50{font-size:50%}.font60{font-size:60%}.font70{font-size:70%}.font80{font-size:80%}.font90{font-size:90%}.font100{font-size:100%}.font110{font-size:110%}.font120{font-size:120%}.font130{font-size:130%}.font140{font-size:140%}.font150{font-size:150%}.font160{font-size:160%}.font170{font-size:170%}.font180{font-size:180%}.font190{font-size:190%}.font200{font-size:200%}body{font-family:'Fira Sans','Droid Serif','Palatino Linotype','Book Antiqua',Palatino,'Microsoft YaHei','Songti SC',serif}.remark-code,.remark-inline-code{font-family:'Fira Code','Lucida Console',Monaco,monospace;font-size:80%}.remark-slide-number{display:none}.main_slide{color:#fff;font-weight:700}.main_slide .remark-inline-code{background:#2b6bc1}.development{background-color:#ff4d33;border-top:80px solid #2b6bc1;color:#000;text-shadow:none}.profile{border-radius:50%;width:80%;padding-left:80px;box-shadow:0 4px 0 0 rgba(0,0,0,.2),0 16px 0 0 rgba(0,0,0,.19);box-shadow:5px 0 0 0 rgba(0,0,0,.1),10px 0 0 0 rgba(0,0,0,.5)}.profile-name{font-size:15px}.row{display:flex;margin-left:300px;margin-right:300px;margin-top:60px}.column{flex:50%;padding:0;margin:0}.bg-logo{background-color:#fff;background-image:url(../images/logo.png);background-repeat:repeat;background-size:50%}
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+layout: false
+class: title-slide, middle, right, main_slide
+background-image: url(images/Italy.png)
+background-size: cover
+
+.font200[The Risk Assessment Shiny App]&lt;br&gt;
+.font150[A case study with `tidyverse`]
+
+&lt;br&gt;
+
+.font90[JSM 2021 Conference &lt;br&gt;
+Marly Gotti, Biogen]
+
+---
+
+# Outline
+
+- The White Paper: **A Risk-based Approach for Assessing R package Accuracy within a Validated Infrastructure**
+
+- The `riskmetric` R package
+
+- The Risk Assessment Shiny Application
+
+- A demo using the `tidyverse`
+
+- Resources
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+*Disclaimer*: The views and opinions expressed in this presentation are my own and do not necessarily reflect those of any organization or company.
+
+---
+
+# About Me
+
+&lt;br&gt;
+
+.pull-left[
+
+&lt;br&gt;
+&lt;img src="images/profile.jpg" class="profile" alt="Marly Gotti"&gt;
+
+]
+
+.pull-right[
+
+&lt;br&gt;
+
+- Pure mathematician by training
+  
+- Data scientist
+  
+- Former RStudio intern in the `tidymodels` team with Max Kuhn
+    
+- Love anything `R`
+    
+- Currently at Biogen in the Data Science team lead by Bob Engle
+
+- Executive committee member of the R-Validation-Hub
+]
+
+---
+
+# The White Paper
+
+&lt;br&gt; 
+
+### "A Risk-based Approach for Assessing R package Accuracy within a Validated Infrastructure"
+
+&lt;br&gt;
+
+* **Andy Nicholls**, Statistics Director, Head of Statistical Data Sciences, GSK
+
+* **Paulo R. Bargo**, Director, Scientific Computing, Statistics &amp; Decision Sciences, Janssen R&amp;D
+
+* **John Sims**, Director, Analytical Systems Architect &amp; Data Science, Pfizer Vaccine Research
+
+&lt;br&gt;
+
+*On behalf of the R Validation Hub, an R Consortium-funded ISC Working Group*
+
+---
+
+background-image: url("images/packageTypes.png")
+background-size: 20%
+background-position: 80% 20%
+
+# Core vs. Contributed R Packages
+
+- **Core (Base R + Recommended)** - Low risk
+    - See [R: Regulatory Compliance and Validation Issues &lt;br&gt;
+A Guidance Document for the Use of R in Regulated &lt;br&gt;
+Clinical Trial Environments](https://www.r-project.org/doc/R-FDA.pdf). 
+    
+    
+- **Contributed** - Variable risk  
+    - Many different authors
+    - Varying SDLCs
+    - Varying levels of popularity
+    - Potentially lots of unknowns
+
+
+We propose a risk-based approach to establish accuracy/validity for contributed packages.
+
+
+.footnote[
+*Image source: German, D.M. &amp; Adams, Bram &amp; Hassan, Ahmed E. (2013). The Evolution of the R Software Ecosystem. Proceedings of the Euromicro Conference on Software Maintenance and Reengineering, CSMR. 243-252. 10.1109/CSMR.2013.33.*
+]
+---
+
+#	Risk Assessment Framework
+
+We propose to assess the risk of contributed R packages based on four criteria:
+
+-	Purpose: 
+  - What will the package be used for?
+  - Statistical vs non-statistical? 
+  - How difficult is it for an end user to identify errors?
+&gt; "Tests should be written for all statistical modeling functions within an Intended for Use Statistical Package, regardless of the risk assessment."
+
+
+-	Maintenance Good Practice (Software Development Life Cycle, SDLC)
+      - How are bugs managed?
+      - What is the documentation like?
+      - Is the source code on GitHub?
+
+
+-	Community Usage
+    - Increased exposure to users (**community usage**) helps to reduce risk
+
+-	Testing (also part of an SDLC)
+
+---
+
+# Proposed Workflow
+
+&lt;br&gt;&lt;br&gt;
+ 
+&lt;img src="images/Assessing-package-accuracy.png" alt="source: Assessing Package Accuracy"&gt;
+
+---
+
+# The **riskmetric** package
+
+- Some questions of interest: 
+
+  - Is the package on CRAN? 
+  - Does it have unit tests?
+  - What is its test coverage?
+  - Does the package have documentation?
+  - How many times has the package been downloaded?
+  - Who are the authors?
+
+- `riskmetric`: Measures the risk of using an R package. It is calculated based on a number of metrics meant to evaluate development best practices, code documentation, community engagement, and development sustainability. This risk does *not* represent
+  - the risk of damaging the system in which the package is installed, or
+  - the risk that the internal (statistical) functions are correct.
+
+- Example:
+  - low risk package: `ggplot2` (risk = 0.206)
+
+---
+
+# The Risk Assessment Shiny Application
+
+- Framework to provide user feedback on the risk calculated by riskmetric
+
+- Inherits the advantages of shiny: no need to code, interactive way to measure risk
+
+- Allows authorized personnel to comment on the metrics
+
+- Historical comments
+
+- Reporting tool
+
+- Adopting R within a GxP server
+
+---
+
+layout: false
+class: inverse, middle, center
+# A live example using &lt;br&gt; the **Risk Assessment App**
+
+[`https://github.com/pharmaR/risk_assessment`](https://github.com/pharmaR/risk_assessment)
+
+---
+
+# Find out more
+
+- Keep up to date at https://www.pharmar.org/
+    - Blog posts
+    - Presentations
+    - White paper
+
+
+- To contribute, send a message to [psi.aims.r.validation@gmail.com](mailto:psi.aims.r.validation@gmail.com)
+
+    
+- Join the [mailing list](https://lists.r-consortium.org/g/RConsortium-Validation-Hub) today!
+
+    
+- [R/Pharma Workshop 2020](https://pharmar.github.io/rpharma2020/)
+
+
+---
+# Acknowledgements
+
+- The R Validation Hub (PSI, EFR Consortium)
+- Contributors to the `riskmetric` package
+- Contributors to the Risk Assessment App
+
+Thank you for your attention!
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "13:9",
+"highlightLanguage": "R",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
