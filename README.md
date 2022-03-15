@@ -1,3 +1,33 @@
+# List of conferences / events for 2022 and status
+
+## rstudio::conf(2022)
+
+July 25-28 to National Harbor, DC
+
+To submit a talk, you’ll need to create a 60 second video
+Proposals due March 21.
+ 
+https://www.rstudio.com/blog/save-the-date/
+
+## phUSE conferences 
+
+Andy asks colleague
+
+## R/Pharma
+
+Nov 8-11, 2022
+
+## R/Medicine
+
+TBA
+
+## useR!
+
+Online, June 20-23, 2022
+
+Abstract submission: March 15
+
+------
 # List of conferences / events for 2021 and status
 
 ## NISS Meetup
