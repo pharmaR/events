@@ -27,7 +27,11 @@ Online, June 20-23, 2022
 
 https://user2022.r-project.org/participate/call-for-abstracts/
 
-Abstract submission: March 15
+Status: Abstract submitted
+
+Title: Learnings and Reflection on the Implementation of Risk-based Package Assessment
+
+Abstract: This contribution has the aim to reflect on the implementation of risk-based approaches to assess R package accuracy within a validated infrastructure. The discussion reflects thinking of the R Validation Hub working group, which is a cross-industry initiative funded by the R Consortium. Our mission is to enable the use of R by the bio-pharmaceutical industry in a regulatory setting, where the output may be used in submissions to regulatory agencies. In early 2020, the R validation Hub has published a white paper which addresses concerns raised by statisticians, statistical programmers, informatics teams, executive leadership, quality assurance teams and others within the pharmaceutical industry about the use of R and selected R packages as a primary tool for statistical analysis for regulatory submission work. In the meanwhile, the R consortium has successfully submitted a fully R-based test package to FDA and various companies have implemented the concept of risk-based R package validation into their standard processes. We will present our learnings from those applied case studies. We highlight which aspects were easy to implement into practice and where difficulties occurred. We also review how new developments in the `riskmetric` R package and shiny app can help with the recent learnings. 
 
 ------
 # List of conferences / events for 2021 and status
