@@ -25,6 +25,8 @@ TBA
 
 Online, June 20-23, 2022
 
+https://user2022.r-project.org/participate/call-for-abstracts/
+
 Abstract submission: March 15
 
 ------
