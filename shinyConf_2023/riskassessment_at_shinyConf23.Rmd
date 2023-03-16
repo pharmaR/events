@@ -14,7 +14,18 @@ knitr::opts_chunk$set(
 
 # `{riskassessment}` app @ shinyConf 2023 <a href='https://bit.ly/raa_docs'><img src="figures/hex-riskassessment-aspconfig.png" align="right" height="172" style="float:right; height:172px;"/></a>
 
+<br>
 
+March 15 - 17, Appsilon hosted the [2nd Annual Shiny Conference](https://shinyconf.appsilon.com/) which was fully virtual with approximately 3k registrants. At any given time, about 1k would be logged on to consume content. The conference also had a dedicated [slack channel](https://app.slack.com/client/T04PB2RNVGE/C04PB2RQBUN) for questions and communication (outside of the hopin platform).
+
+Aaron Clark, from the R Validation Hub Executive Committee, submitted the following abstract and presented the `{riskassessment}` application work for the "Shiny Showcase". His talk was available on demand through all three days of the conference and was even voted "Favorite Shiny App" by conference attendees.
+
+<br>
+
+
+<center>
+<img src="figures/raa_shinyConf_presentation_tile.png" alt="riskassessment app" width="60%">
+</center>
 
 
 ## Abstract
@@ -23,38 +34,84 @@ Building an analysis pipeline can be hard. Especially when it relies on seemingl
 
 Enter the `{riskassessment}` app, an open-source front-end to the `{riskmetric}` package. `{riskmetric}` provides a framework to quantify risk via metrics that evaluate package dev best practices, code documentation, community engagement, and sustainability. The app aims to be a platform for quality assessment within organizations that operate in regulated industries but can be leveraged in various contexts. This presentation will teach you how to leverage `{riskassessment}` to evaluate your R package line up and discuss where development is heading in the future.
 
-## Presentation Materials / Links
-
 <br>
 
-<center>
-<a href="https://bit.ly/demo_raa">
-<img src="figures/demo_riskassessment.png" alt="{riskassessment} app" width="25%">
-</a>
-</center>
-
-<br>
-
-<br>
-
-<a href='https://bit.ly/raa_docs'><img src="figures/raa-image-ug.png" align="right" height="120" style="float:right; padding-right: 30px; height:120px;"/></a>
-
-
-<a href='https://bit.ly/raa_survey'><img src="figures/google_forms_logo.png" align="right" height="72" style="float:right; height:172px;"/></a>
 
 ## Presentation
 
-If you want a quick tour through the app (or need assistance getting past the authentication wall), you should watch this short walk through on the R Consortium's website:
+The talk is currently available on [Appsilon's youtube channel](https://bit.ly/raa_shinyconf23). The first half provides a high level overview that introduces the audience to the work and the second half gives a hands-on demo:
 
 <br>
 
 <center>
-<a href="https://www.r-consortium.org/blog/2022/02/03/risk-assessment-shiny-app-update-from-r-validation-hub">
-<img src="figures/r_con_update.png" alt="R Validation Hub update" width="75%">
+<a href="https://bit.ly/raa_shinyconf23">
+<img src="figures/youtube_thumbnail_with_play_button2.png" alt="riskassessment at shinyConf23" width="65%">
 </a>
 </center>
 
 
 <br>
+
+<br>
+
+## Presentation Materials / Links
+
+Click any of the images below to checkout a few different resources presented in the demonstration:
+
+1. The [demo version](https://bit.ly/demo_raa) of the app, deployed on shinyapps.io
+1. App [User guide](https://bit.ly/raa_docs)
+1. A [Google Form](https://bit.ly/raa_survey) that discerns whether attendees are actual users or `{riskmetric}` and/or `{riskassessment}`, and if so, asks whether we can connect in the future to solicite feedback
+1. PDF [slides](https://github.com/pharmaR/conferences/shinyConf_2023/riskassessment_ClarkAaron_shinyConf2023.pdf)
+
+<br>
+
+
+```{css, echo=FALSE}
+.clearfix:after {
+  content:"";
+  display:block;
+  clear:both;
+ }
+```
+
+
+<center>
+<a href="https://bit.ly/demo_raa"><img src="figures/demo_riskassessment.png" alt="riskassessment app" width="40%"></a>
+
+<br>
+
+<br>
+
+<div class = "clearfix">
+<a href='https://bit.ly/raa_docs'><img src="figures/raa-image-ug.png" height="172" style="float: left; padding-left: 60px; padding-right: 120px; height:172px;"/></a>
+
+<a href='https://bit.ly/raa_survey'><img src="figures/google_forms_logo.png" height="172" style="float: left; padding-right: 120px; height:172px;"/></a>
+
+<a href='https://github.com/pharmaR/conferences/shinyConf_2023/riskassessment_ClarkAaron_shinyConf2023.pdf'><img src="figures/ppt_logo.png" height="172" style="float: right; padding-right: 60px; height:172px;"/></a>
+</div>
+</center>
+
+
+
+<br>
+
+<br>
+
+With any questions, please reach out to Aaron Clark (clark.aaronchris@gmail.com). Enjoy!
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
 
 
