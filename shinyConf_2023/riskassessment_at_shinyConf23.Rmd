@@ -61,7 +61,7 @@ Click any of the images below to checkout a few different resources presented in
 1. The [demo version](https://bit.ly/demo_raa) of the app, deployed on shinyapps.io
 1. App [User guide](https://bit.ly/raa_docs)
 1. A [Google Form](https://bit.ly/raa_survey) that discerns whether attendees are actual users or `{riskmetric}` and/or `{riskassessment}`, and if so, asks whether we can connect in the future to solicite feedback
-1. PDF [slides](https://github.com/pharmaR/conferences/shinyConf_2023/riskassessment_ClarkAaron_shinyConf2023.pdf)
+1. PDF [slides](https://github.com/pharmaR/conferences/blob/main/shinyConf_2023/riskassessment_ClarkAaron_shinyConf2023.pdf)
 
 <br>
 
@@ -87,7 +87,7 @@ Click any of the images below to checkout a few different resources presented in
 
 <a href='https://bit.ly/raa_survey'><img src="figures/google_forms_logo.png" height="172" style="float: left; padding-right: 120px; height:172px;"/></a>
 
-<a href='https://github.com/pharmaR/conferences/shinyConf_2023/riskassessment_ClarkAaron_shinyConf2023.pdf'><img src="figures/ppt_logo.png" height="172" style="float: right; padding-right: 60px; height:172px;"/></a>
+<a href='https://github.com/pharmaR/conferences/blob/main/shinyConf_2023/riskassessment_ClarkAaron_shinyConf2023.pdf'><img src="figures/ppt_logo.png" height="172" style="float: right; padding-right: 60px; height:172px;"/></a>
 </div>
 </center>
 
