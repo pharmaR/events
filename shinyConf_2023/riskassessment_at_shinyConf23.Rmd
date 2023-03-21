@@ -16,15 +16,15 @@ knitr::opts_chunk$set(
 
 <br>
 
-March 15 - 17, Appsilon hosted the [2nd Annual Shiny Conference](https://shinyconf.appsilon.com/) which was fully virtual with approximately 3k registrants. At any given time, about 1k would be logged on to consume content. The conference also had a dedicated [slack channel](https://app.slack.com/client/T04PB2RNVGE/C04PB2RQBUN) for questions and communication (outside of the hopin platform).
+March 15 - 17, Appsilon hosted the [2nd Annual Shiny Conference](https://shinyconf.appsilon.com/) which was fully virtual with approximately 4k registrants. The conference also had a dedicated [slack channel](https://app.slack.com/client/T04PB2RNVGE/C04PB2RQBUN) for questions and communication (outside of the hopin platform).
 
-Aaron Clark, from the R Validation Hub Executive Committee, submitted the following abstract and presented the `{riskassessment}` application work for the "Shiny Showcase". His talk was available on demand through all three days of the conference and was even voted "Favorite Shiny App" by conference attendees.
+Aaron Clark, from the R Validation Hub Executive Committee, submitted the following abstract along with the `{riskassessment}` application work, featured in the "Shiny Showcase". His talk was available on demand through all three days of the conference and was voted "favorite Shiny App" by conference attendees.
 
 <br>
 
 
 <center>
-<img src="figures/raa_shinyConf_presentation_tile.png" alt="riskassessment app" width="60%">
+<img src="figures/best_app_banner.png" alt="riskassessment app" width="70%">
 </center>
 
 
