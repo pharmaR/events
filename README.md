@@ -1,3 +1,36 @@
+# List of conferences / events for 2023 and status
+
+## posit::conf(2023)
+
+Sept 17-20, Chicago
+
+status: abstract submitted
+
+https://posit.co/conference/
+
+## R/Pharma
+
+Oct 24-26, virtual
+
+status: nominated.
+
+https://rinpharma.com/post/2023-03-17-announcement/
+
+## R Adoption series 2023
+
+March 30th, 2023
+
+Recording: https://www.r-consortium.org/r-adoption-series-learnings-and-reflection-from-r-validation-case-studies
+
+## ShinyConf 2023
+
+Mar 15-17, virtual
+
+status: accepted
+
+https://shinyconf.appsilon.com/
+
+------
 # List of conferences / events for 2022 and status
 
 ## rstudio::conf(2022)
