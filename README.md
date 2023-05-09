@@ -30,6 +30,12 @@ status: accepted
 
 https://shinyconf.appsilon.com/
 
+## AstraZeneca R Conference 2023
+June 7th, virtual
+status: accepted 
+(Lyn presenting keynote for CAMIS & R Validation Hub)
+
+
 ------
 # List of conferences / events for 2022 and status
 
