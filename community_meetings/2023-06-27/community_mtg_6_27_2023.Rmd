@@ -1,0 +1,176 @@
+---
+output:
+  xaringan::moon_reader:
+    self_contained: true
+    nature:
+      highlightLines: true
+      highlightLanguage: R
+      countIncrementalSlides: false
+---
+
+
+```{r startup, include = FALSE, message = FALSE, warning = FALSE, cache=TRUE}
+
+```
+```{r xaringanExtra, echo=FALSE, include = FALSE}
+# "share_again",
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "scribble", "search", "webcam", "clipboard", "fit_screen", "tachyons", "editable")) 
+# xaringanExtra::use_animate_all("slide_left")
+xaringanExtra::use_extra_styles(
+  hover_code_line = TRUE,         #<<
+  mute_unhighlighted_code = TRUE  #<<
+)
+```
+
+layout: false
+class: title-slide, inverse, middle, main_slide
+name: title-slide
+
+
+# Learnings & Reflection from Case Studies
+### What's next for the R Validation Hub
+## [Community Meeting 2023-06-27](https://github.com/pharmaR/events/tree/main/community_meetings/2023-06-27)
+
+
+Juliane Manitz, Doug Kelkhoff, Andy Nicholls, Lyn Taylor, Joseph Rickert, Paulo Bargo, Keaven Anderson, Eric Milliman, Aaron Clark and Preetham Palukuru
+
+...on behalf of the R Validation Hub, an R Consortium-funded ISC Working Group
+
+---
+# Agenda
+
+* Recap Case Studies
+
+* Discussion Rounds
+
+  - Package score thresholds (low, medium, or high vs accepted/rejected) and metric weights 
+  
+  - Repository for common packages and their metrics 
+  
+  - Sharing test data and test cases
+  
+  - Ensuring and documenting R package reviewers have the right technical expertise
+
+---
+class: inverse, center, middle
+# Case Studies Recap
+
+https://github.com/pharmaR/case_studies 
+
+
+---
+# Case Studies
+
+* R validation hub initiated a three-part presentation series on “case studies” 
+
+--
+
+* Eight pharma companies participated a case series sharing different experiences on building a GxP framework with R 
+
+--
+
+* Highlight aspects that were easy to implement which those which were more challenging. 
+
+--
+
+* Recordings of these sessions are available on the R Validation minutes page.
+
+--
+
+* Discussion and exchange to be continued on GitHub, where you are welcome to contribute and learn from others.
+
+---
+# Case Studies: Common Themes
+
+* All implementations follow the risk validation process for R packages as outlined in the white paper
+Classification of package quality into high/medium/low or a binary high/low categorization, however the approach to the assessments themselves varies.
+
+--
+
+* High importance of test coverage as assessment metric 
+
+--
+
+* Trusted resources: R Foundation, thus core R (base and recommended packages) are treated as a collective of “low risk” packages; some organizations also trust Rstudio developments, i.e. tidyverse, etc.
+
+--
+
+* The majority focused risk assessments only on “Intended-for-Use” packages but several also ran metrics on the Imports.
+
+
+---
+# Case Studies: Differences in Approach
+
+* Varied degrees of automation in risk classification and qualification i.e. either complete automation or no automation
+
+--
+
+* Different weights were assigned to the testing coverage and various suggested metadata metrics: acceptable threshold for test coverage ranges between 50-80% for low-risk packages
+
+--
+
+* Different risk remediation strategies have been applied:
+
+  - some organizations will immediately introduce their own unit tests, 
+  
+--
+
+  - others restrict package use to only the tested subset of package functionality.
+
+---
+# Case Studies: Shared Challenges
+
+* R package assessment is a resource-intense activity
+
+  - Time has proven to be a considerable challenge. 
+  
+--
+
+  - Ensuring R package reviewers have the right technical expertise 
+  
+--
+
+  - Alignment of different  contributors across the organization: IT, Quality Assurance and with their own Statistics, Data Science, or Programming lines.
+  
+--
+
+* Finding appropriate test datasets, test cases and expected model output
+
+--
+
+* Long-term management and maintenance as well as oversight of the risk-based package assessment process
+
+
+---
+class: inverse, middle
+# Discussion Rounds
+
+* Package score thresholds (low, medium, or high vs accepted/rejected) and metric weights [Aaron]
+
+* Repository for common packages and their metrics [Doug]
+
+* Sharing test data and test cases [Juliane]
+
+* Ensuring and documenting R package reviewers have the right technical expertise [Preetham]
+
+---
+# Discussion Rounds (1/4)
+
+* Package score thresholds (low, medium, or high vs accepted/rejected) and metric weights [Aaron]
+
+
+---
+# Discussion Rounds (2/4)
+
+* Repository for common packages and their metrics [Doug]
+
+---
+# Discussion Rounds (3/4)
+
+* Sharing test data and test cases [Juliane]
+
+---
+# Discussion Rounds (4/4)
+
+* Ensuring and documenting R package reviewers have the right technical expertise [Preetham]
+
