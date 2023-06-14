@@ -9,9 +9,9 @@ output:
 ---
 
 
-```{r startup, include = FALSE, message = FALSE, warning = FALSE, cache=TRUE}
-
+```{r startup, include=FALSE, message=FALSE, warning=FALSE, cache=TRUE}
 ```
+
 ```{r xaringanExtra, echo=FALSE, include = FALSE}
 # "share_again",
 xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "scribble", "search", "webcam", "clipboard", "fit_screen", "tachyons", "editable")) 
@@ -39,6 +39,8 @@ Juliane Manitz, Doug Kelkhoff, Andy Nicholls, Lyn Taylor, Joseph Rickert, Paulo 
 ---
 # Agenda
 
+* R Validation Hub Updates
+
 * Recap Case Studies
 
 * Discussion Rounds
@@ -50,6 +52,29 @@ Juliane Manitz, Doug Kelkhoff, Andy Nicholls, Lyn Taylor, Joseph Rickert, Paulo 
   - Sharing test data and test cases
   
   - Ensuring and documenting R package reviewers have the right technical expertise
+
+---
+# R Validation Hub Updates
+
+* Passing the baton. Doug taking over for Andy in the lead role. 
+
+--
+
+* Team Survey
+  - felt we were doing well to deliver technical products 
+  - but want to renew our focus on planning and communication
+
+--
+
+* Calls for Volunteers!
+  - Growing a Communications workstream (improving consistency of branding, channels of communication, year-long planning)
+  - Building a network of leadership sponsors
+
+--
+
+* Advanced Notice: Upcoming Events
+  - R/Pharma summit at `posit::conf` (Sept 18)
+  - R/Pharma 2023 (Oct 24-26)
 
 ---
 class: inverse, center, middle
@@ -162,7 +187,15 @@ class: inverse, middle
 ---
 # Discussion Rounds (2/4)
 
-* Repository for common packages and their metrics [Doug]
+## Repository for common packages and their metrics
+
+* Does a "one-stop-shop" repository for packages resolve pharma challenges? If not, what is missing?
+
+* Beyond just fetching packages, what are we lacking for building trust?
+
+* How are _opinions_ of packages shared?
+
+* Unit testing is great for development, but is it right for quality assessment? Do we need something more?
 
 ---
 # Discussion Rounds (3/4)

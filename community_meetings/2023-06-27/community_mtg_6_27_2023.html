@@ -3473,7 +3473,7 @@ const addFitScreenHelpText = () => {
 
 document.addEventListener('DOMContentLoaded', addFitScreenHelpText)
 </script>
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x0a197ed33f84d2e8ba2c03d04925913","expires":14}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xbbfb8a5a10d47e8bcea5226fb277536","expires":14}</script>
     <script>(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.himalaya = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
 
@@ -5887,10 +5887,39 @@ Scribble.prototype.defaultPresetColors = [
 ]
 </script>
     <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
-    <style type="text/css">.remark-code-line:hover {font-weight: bold;opacity: 1 !important;}.remark-code-line:hover:before {content: "\25B6";color: #6d7e8a;position: absolute;transform: translateX(-1.2em);animation: hover 0.66s alternate 8 cubic-bezier(0.445, 0.05, 0.55, 0.95);}@keyframes hover {0% {transform: translateX(-1.2em);}100% {transform: translateX(-0.8em);}}.remark-code-has-line-highlighted .remark-code-line:not(.remark-code-line-highlighted) {opacity: 0.4;}.remark-code-line-highlighted {background-color: inherit;}</style>
+    <style type="text/css">
+.remark-code-line:hover {
+font-weight: bold;
+opacity: 1 !important;
+}
+.remark-code-line:hover:before {
+content: "\25B6";
+color: #6d7e8a;
+position: absolute;
+transform: translateX(-1.2em);
+animation: hover 0.66s alternate 8 cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+@keyframes hover {
+0% {
+transform: translateX(-1.2em);
+}
+100% {
+transform: translateX(-0.8em);
+}
+}
+
+.remark-code-has-line-highlighted .remark-code-line:not(.remark-code-line-highlighted) {
+opacity: 0.4;
+}
+
+.remark-code-line-highlighted {
+background-color: inherit;
+}
+</style>
   </head>
   <body>
     <textarea id="source">
+
 
 
 
@@ -5914,6 +5943,8 @@ Juliane Manitz, Doug Kelkhoff, Andy Nicholls, Lyn Taylor, Joseph Rickert, Paulo 
 ---
 # Agenda
 
+* R Validation Hub Updates
+
 * Recap Case Studies
 
 * Discussion Rounds
@@ -5925,6 +5956,29 @@ Juliane Manitz, Doug Kelkhoff, Andy Nicholls, Lyn Taylor, Joseph Rickert, Paulo 
   - Sharing test data and test cases
   
   - Ensuring and documenting R package reviewers have the right technical expertise
+
+---
+# R Validation Hub Updates
+
+* Passing the baton. Doug taking over for Andy in the lead role. 
+
+--
+
+* Team Survey
+  - felt we were doing well to deliver technical products 
+  - but want to renew our focus on planning and communication
+
+--
+
+* Calls for Volunteers!
+  - Growing a Communications workstream (improving consistency of branding, channels of communication, year-long planning)
+  - Building a network of leadership sponsors
+
+--
+
+* Advanced Notice: Upcoming Events
+  - R/Pharma summit at `posit::conf` (Sept 18)
+  - R/Pharma 2023 (Oct 24-26)
 
 ---
 class: inverse, center, middle
@@ -6037,7 +6091,15 @@ class: inverse, middle
 ---
 # Discussion Rounds (2/4)
 
-* Repository for common packages and their metrics [Doug]
+## Repository for common packages and their metrics
+
+* Does a &quot;one-stop-shop&quot; repository for packages resolve pharma challenges? If not, what is missing?
+
+* Beyond just fetching packages, what are we lacking for building trust?
+
+* How are _opinions_ of packages shared?
+
+* Unit testing is great for development, but is it right for quality assessment? Do we need something more?
 
 ---
 # Discussion Rounds (3/4)
