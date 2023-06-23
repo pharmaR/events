@@ -8,6 +8,7 @@ output:
       highlightLines: true
       highlightLanguage: R
       countIncrementalSlides: false
+      
 ---
 
 ```{r xaringanExtra, echo=FALSE, include=FALSE}
@@ -35,11 +36,12 @@ xaringanExtra::use_extra_styles(
 layout: false
 class: title-slide, inverse, middle, main_slide
 name: title-slide
+background-image: url('https://github.com/pharmaR/events/blob/main/templates/RvalHub_title.PNG');
 
 ```{r xaringan-logo, echo=FALSE}
 xaringanExtra::use_logo(
   image_url = "https://raw.githubusercontent.com/pharmaR/pharmaR.github.io/preview/static/img/banners/pharmaRlogo.png",
-  width = "15vw",
+  width = "42vw",
   position = xaringanExtra::css_position(bottom = "-1rem", right = "1rem"),
   exclude_class = c("title-slide", "inverse", "hide_logo")
 )
@@ -54,14 +56,17 @@ Juliane Manitz, Doug Kelkhoff, Andy Nicholls, Lyn Taylor, Joseph Rickert, Paulo 
 
 ...on behalf of the R Validation Hub, an R Consortium-funded ISC Working Group
 
+
 ---
+
+class: inverse, middle
 # Agenda
 
-* R Validation Hub Updates
+1. R Validation Hub Updates
 
-* Recap Case Studies
+2. Recap Case Studies
 
-* Discussion Rounds
+3. Discussion Rounds
 
   - Package score thresholds (low, medium, or high vs accepted/rejected) and metric weights 
   
