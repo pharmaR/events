@@ -215,7 +215,7 @@ class: inverse, middle
 * Would there be value on building industry consensus for these risk thresholds?
 
 ---
-# Discussion Rounds (2/4 with _Juliane_)
+# Discussion Rounds (2/4 with _Coline_)
 
 ## Repository for common packages and their metrics
 
@@ -234,7 +234,7 @@ class: inverse, middle
   adoption?
 
 ---
-# Discussion Rounds (3/4 with _Coline_)
+# Discussion Rounds (3/4 with _Juliane_)
 
 ## Sharing test data and test cases 
 
