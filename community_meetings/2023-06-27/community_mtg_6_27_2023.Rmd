@@ -311,14 +311,14 @@ Ultimately, it's up to you. But it'd be nice to have some of consensus. Here is 
 **q: has_source_control**: package has an associated version-controlled repository.<br>
 **r: covr_coverage**: fraction of lines of code which are covered by a unit test.<br>
 
-In the chat - say "b up" or "d down" to upweight or downweight a metric for example!
+**In the chat** - say "b up" or "d down" to upweight or downweight a metric for example!
 
 
 
 ---
 # Do you want the CRAN scoring data?
 
-If you complete our survey, I'll email you the data & code to reproduce my analysis. Of course, you could write a script to do it yourself too. But it took me 11 hours to run on my laptop, so taking a 10-minute survey would be waaay easier!
+If you complete our survey, I'll email you the data (and code to reproduce my analysis). Of course, you could write a script to do it yourself. But it took me 10 hours to run on my laptop, so taking a 10-minute survey would be waaay easier!
 
 
 <a href='https://bit.ly/risk_survey'><img src="images/google_forms_logo.png" height="180" style="padding-left: 350px; height:180px;"/></a>
@@ -327,7 +327,7 @@ If you complete our survey, I'll email you the data & code to reproduce my analy
 
 --
 
-### Stay tuned...
+#### Stay tuned...
 
 * Presentation @ userR! Conf 2023 in Basel, Switzerland
 
