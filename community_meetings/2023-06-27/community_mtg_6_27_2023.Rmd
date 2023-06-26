@@ -1,4 +1,5 @@
 ---
+always_allow_html: true
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
@@ -36,13 +37,14 @@ xaringanExtra::use_extra_styles(
 layout: false
 class: title-slide, inverse, middle, main_slide
 name: title-slide
-background-image: url('https://github.com/pharmaR/events/blob/main/templates/RvalHub_title.PNG');
+background-image: ../../templates/RvalHub_title.PNG 
 
 ```{r xaringan-logo, echo=FALSE}
 xaringanExtra::use_logo(
   image_url = "https://raw.githubusercontent.com/pharmaR/pharmaR.github.io/preview/static/img/banners/pharmaRlogo.png",
-  width = "42vw",
-  position = xaringanExtra::css_position(bottom = "-1rem", right = "1rem"),
+  height = "15%",
+  width = "20%",
+  position = xaringanExtra::css_position(top = "85%"),
   exclude_class = c("title-slide", "inverse", "hide_logo")
 )
 ```
@@ -195,33 +197,45 @@ class: inverse, middle
 
 * Package score thresholds (low, medium, or high vs accepted/rejected) and metric weights [Aaron]
 
-* Repository for common packages and their metrics [Doug]
+* Repository for common packages and their metrics [Coline]
 
 * Sharing test data and test cases [Juliane]
 
 * Ensuring and documenting R package reviewers have the right technical expertise [Preetham]
 
 ---
-# Discussion Rounds (1/4)
+# Discussion Rounds (1/4 with _Aaron_)
 
-* Package score thresholds (low, medium, or high vs accepted/rejected) and metric weights [Aaron]
+## Package score thresholds (low, medium, or high vs accepted/rejected) and metric weights
 
+* What are the driving metrics for decision making?
+
+* Are there ways that the `riskassessment` app can support this style of
+  decision-making more directly?
+
+* Would there be value on building industry consensus for these risk thresholds?
 
 ---
-# Discussion Rounds (2/4)
+# Discussion Rounds (2/4 with _Juliane_)
 
 ## Repository for common packages and their metrics
 
-* Does a "one-stop-shop" repository for packages resolve pharma challenges? If not, what is missing?
+* Does a "one-stop-shop" repository for packages resolve pharma challenges? If 
+  not, what is missing?
 
 * Beyond just fetching packages, what are we lacking for building trust?
 
 * How are _opinions_ of packages shared?
 
-* Unit testing is great for development, but is it right for quality assessment? Do we need something more?
+* Unit testing is great for development, but is it right for quality assessment? 
+  Do we need something more?
+
+* If evidence of quality is shown in a standard comput environment (ie, a
+  rockerverse image), what remaining gaps might prevent immediate company
+  adoption?
 
 ---
-# Discussion Rounds (3/4)
+# Discussion Rounds (3/4 with _Coline_)
 
 ## Sharing test data and test cases 
 
@@ -234,7 +248,15 @@ class: inverse, middle
 * How do we channel test cases back to package developer? 
 
 ---
-# Discussion Rounds (4/4)
+# Discussion Rounds (4/4 with _Preetham_)
 
-* Ensuring and documenting R package reviewers have the right technical expertise [Preetham]
+## Ensuring and documenting R package reviewers have the right technical expertise
 
+* Who reviews R packages? What is the role of software engineers, statisticians,
+  clinical experts?
+
+* How do we reconcile different interpretations of package quality when viewed
+  from these different roles?
+
+* What can the R Validation Hub do to elevate discussions beyond pure code
+  quality?
