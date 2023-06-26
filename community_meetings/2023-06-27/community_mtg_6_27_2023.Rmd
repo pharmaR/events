@@ -223,7 +223,15 @@ class: inverse, middle
 ---
 # Discussion Rounds (3/4)
 
-* Sharing test data and test cases [Juliane]
+## Sharing test data and test cases 
+
+* Do you use the CDISC data? 
+
+* Do you use example data from standard statistical textbooks? 
+
+* Do you share observed differences in implementations at CAMIS [(Comparing Analysis Method Implementations in Software)](https://psiaims.github.io/CAMIS/)
+
+* How do we channel test cases back to package developer? 
 
 ---
 # Discussion Rounds (4/4)
