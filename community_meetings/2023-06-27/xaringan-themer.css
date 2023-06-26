@@ -140,7 +140,7 @@ a, a > code {
 }
 .title-slide {
   background-color: var(--title-slide-background-color);
-  background-image: url("RvalHub_title.PNG");
+  background-image: url(../../templates/RvalHub_title.PNG);
   background-size: cover;
 }
 .title-slide .remark-slide-number {
