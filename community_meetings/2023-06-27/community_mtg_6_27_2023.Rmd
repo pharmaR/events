@@ -37,7 +37,6 @@ xaringanExtra::use_extra_styles(
 layout: false
 class: title-slide, inverse, middle, main_slide
 name: title-slide
-background-image: ../../templates/RvalHub_title.PNG 
 
 ```{r xaringan-logo, echo=FALSE}
 xaringanExtra::use_logo(
