@@ -13,17 +13,17 @@ output:
 ---
 
 ```{r xaringanExtra, echo=FALSE, include=FALSE}
-xaringanExtra::use_xaringan_extra(c(
-  "tile_view", 
-  "animate_css", 
-  "scribble", 
-  "search", 
-  "webcam", 
-  "clipboard", 
-  "fit_screen", 
-  "tachyons", 
-  "editable"
-)) 
+# xaringanExtra::use_xaringan_extra(c(
+#   "tile_view", 
+#   "animate_css", 
+#   "scribble", 
+#   "search", 
+#   "webcam", 
+#   "clipboard", 
+#   "fit_screen", 
+#   "tachyons", 
+#   "editable"
+# )) 
 
 xaringanExtra::use_extra_styles(
   hover_code_line = TRUE,         #<<
