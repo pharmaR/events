@@ -132,7 +132,10 @@ https://github.com/pharmaR/case_studies
 # Case Studies: Common Themes
 
 * All implementations follow the risk validation process for R packages as outlined in the white paper
-Classification of package quality into high/medium/low or a binary high/low categorization, however the approach to the assessments themselves varies.
+
+--
+
+* Classification of package quality into high/medium/low or a binary high/low categorization, however the approach to the assessments themselves varies.
 
 --
 
