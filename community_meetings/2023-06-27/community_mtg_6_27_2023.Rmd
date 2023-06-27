@@ -242,14 +242,14 @@ Discussion: How do you feel about **risk scores?** Are they integral to your rev
 
 Through our case study work, we've seen many leverage the **low, medium, or high** risk categories. We enhanced the `{riskassessment}` app to allow users to set "risk decision thresholds" automatically, tagging packages based on pkg score:
 
-<img src="images/risk_score_threshold_high.png" height="300" style="padding-left:120px; height:300px;"/>
+<img src="images/risk_score_threshold_high1.png" height="300" style="padding-left:120px; height:300px;"/>
 
 
 ---
 ## Package scores! (cont'd)
 
 
-![](images/Decision_auto_tagged.png)
+![](images/Decision_auto_tagged1.png)
 
 So the big question is:
 
