@@ -205,14 +205,125 @@ class: inverse, middle
 ---
 # Discussion Rounds (1/4 with _Aaron_)
 
-## Package score thresholds (low, medium, or high vs accepted/rejected) and metric weights
+## Package risk scores & metric weights!
 
-* What are the driving metrics for decision making?
+--
 
-* Are there ways that the `riskassessment` app can support this style of
-  decision-making more directly?
+<img src="images/hex-riskmetric-aspconfig.png" align="right" height="172" style="float:right; padding-right:75px; height:172px;"/>
 
-* Would there be value on building industry consensus for these risk thresholds?
+Let's back up first! 
+
+
+* What is `{riskmetric}`?
+
+--
+
+<br>
+
+**Question for the chat:**
+
+To what extent have you (or your organization) used `{riskmetric}`?
+* a. Never used it, and don't plan to
+* b. We're considering using it, but haven't gotten very far
+* c. Played with it a bit, but we don't use it formally. We came up with our own method that is...
+  * c1: similar or borrows ideas from `{riskmetric}`
+  * c2: nothing like `{riskmetric}`
+* d. We use components or all of `{riskmetric}` in our R-package validation process
+
+
+
+---
+
+# Package scores!
+
+Discussion: How do you feel about **risk scores?** Are they integral to your review process? Do you even care about them? Enter **"Care"** / **"Don't Care"** in the chat!
+
+--
+
+Through our case study work, we've seen many leverage the **low, medium, or high** risk categories. We enhanced the `{riskassessment}` app to allow users to set "risk decision thresholds" automatically, tagging packages based on pkg score:
+
+<img src="images/risk_score_threshold_high1.png" height="300" style="padding-left:120px; height:300px;"/>
+
+
+---
+## Package scores! (cont'd)
+
+
+![](images/Decision_auto_tagged1.png)
+
+So the big question is:
+
+* How high is **too high**? Put it in the chat!
+
+--
+
+Ultimately, it's up to you. But it'd be nice to have some of consensus. Here is some data to help us make these decisions...
+
+
+---
+## We scored all of CRAN (19,715 pkgs)
+
+
+![](images/risk_scores_by_group_all_cran.png)
+
+---
+## Pkg Groups and Highly Downloaded
+
+
+![](images/risk_scores_by_group_prime_grps.png)
+
+---
+## Groups with fewer downloads
+
+<!-- <img src="images/risk_scores_by_group_fewer_dwnlds.png" height="300" style="padding-left: 70px; height:300px;"/> -->
+
+![](images/risk_scores_by_group_fewer_dwnlds.png)
+
+
+---
+### Package Weights!
+
+a: **news_current**: News file has an entry for the current version of the package.<br>
+b: **has_vignettes**: package contains vignettes.<br>
+c: **size_codebase**: a logistic rating of the number of lines of code in the package.<br>
+d: **has_bug_reports_url**:  package links to a location to file bug reports.<br>
+e: **bugs_status**:  fraction of the last 30 bugs which have been closed.<br>
+f: **license**: the package ships with an acceptable license.<br>
+g: **export_help**: fraction of exported objects that are documented.<br>
+h: **reverse_dependencies**: (log10) number of packages that depend on this package.<br>
+i: **downloads_1yr**: logistic rating of the number of package downloads in the past year.<br>
+j: **dependencies**:  number of package dependencies.<br>
+k: **has_website**: package has an accompanying website.<br>
+l: **r_cmd_check**: weighted sum of errors/warnings/notes from R CMD Check.<br>
+m: **remote_checks**: weighted sum of OS flavor R CMD check results.<br>
+n: **has_maintainer**:  package has a maintainer.<br>
+o: **exported_namespace**:  fraction of exported objects that are documented.<br>
+p: **has_news**:  package has a NEWS file.<br>
+q: **has_source_control**: package has an associated version-controlled repository.<br>
+r: **covr_coverage**: fraction of lines of code which are covered by a unit test.<br>
+
+In the chat - say **'up-weight covr_coverage'** or 'up-weight r' or to up-weight or down-weight a metric! 
+
+
+
+---
+# Do you want scoring data for CRAN?
+
+If you complete our survey, I'll send the data (and code to reproduce my analysis). Of course, you could write a script to do it yourself. But it took 10 hours to run on my laptop, so taking a 10-minute survey would be waaaay easier!
+
+
+<a href='https://bit.ly/risk_survey'><img src="images/google_forms_logo.png" height="180" style="padding-left: 350px; height:180px;"/></a>
+
+
+--
+
+#### Stay tuned...
+
+* Presentation @ userR! Conf 2023 in Basel, Switzerland
+
+* Full deployment of `{riskassessment}` app with top 1k downloaded CRAN pkgs uploaded for companies to collaborate on
+
+
 
 ---
 # Discussion Rounds (2/4 with _Coline_)
@@ -259,3 +370,4 @@ class: inverse, middle
 
 * What can the R Validation Hub do to elevate discussions beyond pure code
   quality?
+
