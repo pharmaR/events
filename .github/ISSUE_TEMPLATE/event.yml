@@ -42,7 +42,6 @@ body:
         #### 28 Days Prior
 
         - [ ] [Planning] Title & abstract prepared
-
         - [ ] [Marketing] Pass along title and abstract info to R Consortium 
               marketing team to advertise
         - [ ] [Marketing] Send out "Mark your calendars" email
@@ -50,20 +49,13 @@ body:
         #### 14 Days Prior
 
         - [ ] [Planning] Event materials prepared
-        - [ ] [Planning] Event trial run
+        - [ ] [Planning] Event trial run (as needed)
 
         #### 7 Days Prior
 
         - [ ] [Marketing] Send out reminder email
-        - [ ] [Everyone] Share on social media
 
-
-  - type: markdown
-    attributes:
-      value: |
-        ---
-
-        **Organizer tasks for** @pharmaR/ws-communications
+        ### Event scheduling kickoff
 
         - [ ] Create milestone for event
         - [ ] Convert preparation checklist to issues
