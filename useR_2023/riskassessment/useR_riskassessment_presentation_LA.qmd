@@ -3,19 +3,25 @@ author: "Lars Andersen"
 format: rvalhub-revealjs
 html:
     self-contained: true
+    fontsize: 30
 editor: visual
 ---
 
-## "A Shiny App for R-Package Risk Assessment"
+## A Shiny App for R-Package Risk Assessment
 
 ::: columns
-
 ::: {.column width="80%"}
-![](images/title_app_page.png) Lars Andersen, 21st July 2023 @useR!2023 Basel
+![](images/title_app_page.png) Lars Andersen, 21st July 2023 @useR! 2023 Basel
 :::
 
 ::: {.column width="20%"}
-![](images/riskassessment_logo.png) ![](images/pharmaverse_logo.png)
+<!-- ![](images/riskassessment_logo.png)  -->
+
+<!-- <img src="images/riskassessment_logo.png" height="172" style="height:172px;"/> -->
+
+<!-- <img src="images/pharmaverse_logo.png" height="172" style="height:172px;"/> -->
+
+![](images/riskassessment_logo_small.png) ![](images/pharmaverse_logo.png)
 :::
 :::
 
@@ -26,31 +32,28 @@ editor: visual
 *Any opinions expressed in this presentation and on the following slides are solely those of the presenter and do not necessarily reflect those of BI*
 
 ## Validating open-source software
-::: columns
-:::{.column .quarto-subcolumn width="100%" style="font-size: 30px;"}
-
--   Consortia of \~50 companies (mostly pharma and biotech)
--   <b>Mission:</b> R Validation Hub is a cross-industry initiative whose
-mission is to enable the use of R by the Bio-Pharmaceutical
-industry in a regulatory setting, where the output may be
-used in submissions to regulatory agencies.
-
-:::
-:::
-
-## Two tools and what do they do?
 
 ::: columns
-::: {.column width="20%"}
-![](images/riskmetric_logo.png)
-<br><br>
-![](images/riskassessment_logo.png)
+::: {.column width="90%"}
+-   Group of \~50 companies (mostly pharma & biotech)
+
+<br>
+
+-   <b>Mission:</b> R Validation Hub is a cross-industry initiative whose mission is to enable the use of R by the Bio-Pharmaceutical industry in a regulatory setting, where the output may be used in submissions to regulatory agencies.
+:::
 :::
 
-::: {.column .quarto-subcolumn width="80%" style="font-size: 30px;"}
-is a framework to quantify an R package's "risk" by assessing several meaningful metrics designed to evaluate package development best practices, code documentation, community engagement, and development sustainability. <br><br> is a full-fledged R package containing a shiny front-end that augments the utility of `riskmetric`. The application's goal is to provide a central hub for an organization to review and assess the risk of R packages, providing handy tools and guide rails along the way.
-:::
-:::
+<!-- ## Two tools and what do they do? -->
+
+<!-- ::: columns -->
+<!-- ::: {.column width="20%"} -->
+<!-- ![](images/riskmetric_logo.png) <br><br> ![](images/riskassessment_logo.png) -->
+<!-- ::: -->
+
+<!-- ::: {.column width="75%" style="font-size:28px"} -->
+<!-- is a framework to quantify an R package's "risk" by assessing several meaningful metrics designed to evaluate package development best practices, code documentation, community engagement, and development sustainability.<br><br><br> is a full-fledged R package containing a shiny front-end that augments the utility of `{riskmetric}`. The application's goal is to provide a central hub for an organization to review and assess the risk of R packages, providing handy tools and guide rails along the way. -->
+<!-- ::: -->
+<!-- ::: -->
 
 ## Quantify risk programmatically
 
@@ -59,8 +62,9 @@ is a framework to quantify an R package's "risk" by assessing several meaningful
 ![](images/riskmetric_logo.png)
 :::
 
-::: {.column .quarto-subcolumn width="80%" style="font-size: 30px;"}
-<!-- Sometimes "quality" is measurable! Software dev best practices dictate an R-package should have:<br> -->
+::: {.column width="80%"}
+::: {style="font-size:28px"}
+Sometimes "quality" is measurable! Software dev best practices dictate an R-package should have:<br> 
 
 -   A license
 -   Source code available for browsing
@@ -70,7 +74,8 @@ is a framework to quantify an R package's "risk" by assessing several meaningful
 -   Complete Function documentation
 -   Adequate test coverage
 -   Community usage
--   Many more!
+-   18 total assessments (to date)!
+:::
 :::
 :::
 
@@ -81,46 +86,63 @@ is a framework to quantify an R package's "risk" by assessing several meaningful
 ![](images/riskassessment_logo.png)
 :::
 
-::: {.column .quarto-subcolumn width="80%" style="font-size: 30px;"}
+::: {.column width="80%"}
 <!-- The app extends the functionality of {riskmetric} by managing the review process <b>within an organizational context</b>, empowering the reviewer to: <br> -->
 
--   Analyze `riskmetric` output without the need to write R code
--   Run `riskmetric` on the same machine with the same environment -- creating central hub for reproducibility of risk scores
+::: {style="font-size:28px"}
+-   Analyze `{riskmetric}` output without the need to write R code
+-   Run `{riskmetric}` on the same machine with the same environment -- creating central hub for reproducibility of risk scores
 -   Facilitate and store communication on certain packages / metrics
--   Automatic package categorization with an overall decision based on `riskmetric` scores
+-   Automatic package categorization with an overall decision based on `{riskmetric}` scores
 -   Generate dynamic reports
--   Leverage user authentication with user role management 
+-   Leverage user authentication with user role management
+:::
 :::
 :::
 
 ## Demo
+
+<br> <br>
 
 ::: columns
 ::: {.column width="20%"}
 ![](images/riskassessment_logo_large.png)
 :::
 
-::: {.column width="80%"}
-[Shinyapps.io](https://rinpharma.shinyapps.io/riskassessment_v100_dev/)
+::: {.column width="80%" style="font-size:56px"}
+<br> [Shinyapps.io](https://rinpharma.shinyapps.io/riskassessment_v100_dev/)
 :::
 :::
 
 ## Coming soon
 
+#### {riskscore}
+
 ::: columns
-:::{.column .quarto-subcolumn width="100%" style="font-size: 30px;"}
+::: {.column width="30%" style="font-size:28px"}
+In it's early stages, a new data package containing the `{riskmetric}` assessments & scores for all packages on CRAN.
+:::
 
--   riskscore
-
-in it's early stages, a new data package the R Validation Hub is working on, that contains the `riskmetric` scores for all pkgs on CRAN.
-
--   Package Explorer
-
-include GSK's code to manually navigate the actual package contents (e.g. browse the robustness of tests written for each function).
+::: {.column width="70%"}
+![](images/risk_scores_by_group_all_cran.png)
 :::
 :::
 
-## Team
+## Coming soon
+
+#### Package Explorer
+
+::: columns
+::: {.column width="30%" style="font-size:28px"}
+A suite of hands-on review tools (from our friends at GSK) will allow users to browse unit tests, source code, and man (doc) pages for any exported function.
+:::
+
+::: {.column width="70%"}
+![](images/pkg_explorer.png)
+:::
+:::
+
+## Dev Team
 
 ![](images/team.png)
 
