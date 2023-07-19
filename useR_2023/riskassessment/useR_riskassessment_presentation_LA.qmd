@@ -16,8 +16,11 @@ editor: visual
 
 ::: {.column width="20%"}
 <!-- ![](images/riskassessment_logo.png)  -->
+
 <!-- <img src="images/riskassessment_logo.png" height="172" style="height:172px;"/> -->
+
 <!-- <img src="images/pharmaverse_logo.png" height="172" style="height:172px;"/> -->
+
 ![](images/riskassessment_logo_small.png) ![](images/pharmaverse_logo.png)
 :::
 :::
@@ -40,17 +43,17 @@ editor: visual
 :::
 :::
 
-## Two tools and what do they do?
+<!-- ## Two tools and what do they do? -->
 
-::: columns
-::: {.column width="20%"}
-![](images/riskmetric_logo.png) <br><br> ![](images/riskassessment_logo.png)
-:::
+<!-- ::: columns -->
+<!-- ::: {.column width="20%"} -->
+<!-- ![](images/riskmetric_logo.png) <br><br> ![](images/riskassessment_logo.png) -->
+<!-- ::: -->
 
-::: {.column width="75%" style="font-size:28px"}
-is a framework to quantify an R package's "risk" by assessing several meaningful metrics designed to evaluate package development best practices, code documentation, community engagement, and development sustainability.<br><br><br> is a full-fledged R package containing a shiny front-end that augments the utility of `{riskmetric}`. The application's goal is to provide a central hub for an organization to review and assess the risk of R packages, providing handy tools and guide rails along the way.
-:::
-:::
+<!-- ::: {.column width="75%" style="font-size:28px"} -->
+<!-- is a framework to quantify an R package's "risk" by assessing several meaningful metrics designed to evaluate package development best practices, code documentation, community engagement, and development sustainability.<br><br><br> is a full-fledged R package containing a shiny front-end that augments the utility of `{riskmetric}`. The application's goal is to provide a central hub for an organization to review and assess the risk of R packages, providing handy tools and guide rails along the way. -->
+<!-- ::: -->
+<!-- ::: -->
 
 ## Quantify risk programmatically
 
@@ -60,9 +63,9 @@ is a framework to quantify an R package's "risk" by assessing several meaningful
 :::
 
 ::: {.column width="80%"}
-<!-- Sometimes "quality" is measurable! Software dev best practices dictate an R-package should have:<br> -->
-
 ::: {style="font-size:28px"}
+Sometimes "quality" is measurable! Software dev best practices dictate an R-package should have:<br> 
+
 -   A license
 -   Source code available for browsing
 -   An easy to contact maintainer
@@ -107,8 +110,7 @@ is a framework to quantify an R package's "risk" by assessing several meaningful
 :::
 
 ::: {.column width="80%" style="font-size:56px"}
-<br>
-[Shinyapps.io](https://rinpharma.shinyapps.io/riskassessment_v100_dev/)
+<br> [Shinyapps.io](https://rinpharma.shinyapps.io/riskassessment_v100_dev/)
 :::
 :::
 
@@ -120,6 +122,7 @@ is a framework to quantify an R package's "risk" by assessing several meaningful
 ::: {.column width="30%" style="font-size:28px"}
 In it's early stages, a new data package containing the `{riskmetric}` assessments & scores for all packages on CRAN.
 :::
+
 ::: {.column width="70%"}
 ![](images/risk_scores_by_group_all_cran.png)
 :::
@@ -133,6 +136,7 @@ In it's early stages, a new data package containing the `{riskmetric}` assessmen
 ::: {.column width="30%" style="font-size:28px"}
 A suite of hands-on review tools (from our friends at GSK) will allow users to browse unit tests, source code, and man (doc) pages for any exported function.
 :::
+
 ::: {.column width="70%"}
 ![](images/pkg_explorer.png)
 :::
