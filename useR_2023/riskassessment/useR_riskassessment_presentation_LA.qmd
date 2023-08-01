@@ -1,5 +1,5 @@
 ---
-author: "Lars Andersen"
+author: "Aaron Clark"
 format: rvalhub-revealjs
 html:
     self-contained: true
@@ -29,7 +29,7 @@ editor: visual
 
 </br></br></br>
 
-*Any opinions expressed in this presentation and on the following slides are solely those of the presenter and do not necessarily reflect those of BI*
+*Any opinions expressed in this presentation and on the following slides are solely those of the presenter and do not necessarily reflect those sponsoring the work.*
 
 ## Validating open-source software
 
