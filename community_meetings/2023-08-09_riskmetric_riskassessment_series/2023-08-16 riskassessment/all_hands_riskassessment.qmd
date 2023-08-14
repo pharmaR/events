@@ -7,23 +7,33 @@ html:
 editor: visual
 ---
 
-## A Shiny App for R-Package Risk Assessment
+## Shiny for R-Package Risk Assessment
+
+<br>
 
 ::: columns
 ::: {.column width="80%"}
-![](images/title_app_page.png) Lars Andersen, 21st July 2023 @useR! 2023 Basel
+![](images/title_app_page.png)
+
+Aaron Clark, 16 Aug 2023
 :::
 
 ::: {.column width="20%"}
-
 <!-- ![](images/riskassessment_logo.png)  -->
 
 <img src="images/riskassessment_logo.png" height="172" style="height:172px; margin-left:15px"/>
 
 ![](images/pharmaverse_logo.png)
+:::
+:::
 
-:::
-:::
+
+
+
+
+
+
+
 
 ## Disclaimer
 
@@ -31,19 +41,38 @@ editor: visual
 
 *Any opinions expressed in this presentation and on the following slides are solely those of the presenter and do not necessarily reflect those sponsoring the work*
 
-## Validating open-source software
 
-\[Add big RVal Hub logo\]
+
+
+
+
+
+---
 
 ::: columns
 ::: {.column width="90%"}
--   Group of \~50 companies (mostly pharma & biotech)
 
-<br>
+<!-- ![](images/pharmaRlogo_large.png) -->
 
--   <b>Mission:</b> R Validation Hub is a cross-industry initiative whose mission is to enable the use of R by the Bio-Pharmaceutical industry in a regulatory setting, where the output may be used in submissions to regulatory agencies.
+<img src="images/pharmaRlogo_large.png" style="height:190px"/>
+
+<div style="font-size:32px">
+* Consortia of ~50 companies (mostly pharma and biotech)
+
+* Focus on designing/building a framework to validate R and R packages with an eye to all open-source software.
+
+* The main goal is ensuring proper validation documentation exists in accordance with expectations of regulatory agencies.
+
+Checkout <b>[pharmar.org](https://www.pharmar.org/)</b> to learn about all work streams and get involved!
+</div>
+
+
 :::
 :::
+
+
+
+
 
 ## Two tools: what do they do
 
@@ -57,7 +86,10 @@ is a framework to quantify an R package's "risk" by assessing several meaningful
 :::
 :::
 
-## Two tools: where they fit
+
+
+
+
 
 
 
@@ -86,6 +118,9 @@ Sometimes "quality" is measurable! Software dev best practices dictate an R-pack
 :::
 :::
 
+
+
+
 ## Why create a Shiny app?
 
 ::: columns
@@ -99,22 +134,47 @@ Sometimes "quality" is measurable! Software dev best practices dictate an R-pack
 ::: {style="font-size:28px"}
 Our audience / users: those those making 'package inclusion' requests for GxP environments. They need support to...
 
--  Generate consistent, org-specific analysis of risk outputs & a means for package exploration without the need to write R code
--  Run `{riskmetric}` on the same machine with the same environment -- creating a central hub for reproducibility
--  Automate 'decision triage' based on pre-defined rules, saving time & mental energy
--  Manage who's involved in the review process with user authentication with user role management
--  Facilitate and store communication between many users, on certain packages and/or metrics
--  Generate risk summary reports, with opportunity to inject opinions, for sharing with the decision making parties
+--
 
+-   Generate consistent, org-specific analysis of risk outputs & a means for package exploration without the need to write R code
+
+--
+
+-   Run `{riskmetric}` on the same machine with the same environment -- creating a central hub for reproducibility
+
+--
+
+-   Automate 'decision triage' based on pre-defined rules, saving time & mental energy
+
+--
+
+-   Manage who's involved in the review process with user authentication with user role management
+
+--
+
+-   Facilitate and store communication between many users, on certain packages and/or metrics
+
+--
+
+-   Generate risk summary reports, with opportunity to inject opinions, for sharing with the decision making parties
 :::
 :::
 :::
 
-## Today: latest features
 
-## Demo
 
-<br> <br>
+
+## Why create a Shiny app?
+
+Highest and best use of the app? It's all about two things:
+
+- forcing org members to take responsibility for assessing package risk themselves prior to making an IT request
+- generating a summary report for IT that shows the requestor has done their due diligence meeting inclusion requirements
+
+`[pic of example report and arrow to ppm]`
+
+
+## An exercise: Review the XYZ package
 
 ::: columns
 ::: {.column width="20%"}
@@ -126,6 +186,95 @@ Our audience / users: those those making 'package inclusion' requests for GxP en
 :::
 :::
 
+
+
+
+
+
+
+
+## Latest features of v2.0.0
+
+Most notably:
+
+* Face lift to the `'Report Builder'` & `'Database View'`
+* Better support to analyze dependencies
+* Added unparalleled customization, including the use of a configuration file 
+* Allow `admin` users to edit roles and privileges on the fly
+* Allow users to explore source contents of package
+
+The feedback loop is crucial! Submit an issue on GitHub today.
+
+
+
+
+
+
+
+
+## Latest: `'Report Builder'` Face Lift
+
+* A more holistic Report Builder. This allows users to define what content shows up in the report (#348).
+
+* Users can now compose a long form "Package Summary" to keep track of more pertinent items (perhaps items less central to {riskmetric} output) for a more rounded package review (#348).
+  
+  
+## Latest: `'Database View'` Face Lift
+  
+
+* More useful content
+
+  * Date uploaded
+  * Decision-related columns like the decision time stamp & decision source
+  
+* Introduced the decision category table
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+## Latest: Set custom org-level settings
+
+Customizable either in-app or via the config file. What are the changes?
+
+* Added decision categories
+  * Added decision automation rules
+  * Added log file designation
+  * Implemented user roles/privileges to allow for more granular access to actions in the application
+  * Allow metric weights to be initialized
+  * Custom colors
+
+
+
+
+
+
+
+
+## Latest: Edit Roles & Privileges
+
+
+
+
+
+
+
+
+## Latest: Explore Package Source Code
+
+* More manual package review process
+
+
+
+
+
+
+
 ## Coming soon
 
 #### {riskscore}
@@ -133,13 +282,26 @@ Our audience / users: those those making 'package inclusion' requests for GxP en
 ::: columns
 ::: {.column width="30%" style="font-size:28px"}
 <!-- In it's early stages, a new data package containing the `{riskmetric}` assessments & scores for all packages on CRAN. -->
-<p style="font-size:28px">In it's early stages, a new data package containing the `{riskmetric}` assessments & scores for all packages on CRAN.</p>
+
+<p style="font-size:28px">
+
+In it's early stages, a new data package containing the `{riskmetric}` assessments & scores for all packages on CRAN.
+
+</p>
 :::
 
 ::: {.column width="70%"}
 ![](images/risk_scores_by_group_all_cran.png)
 :::
 :::
+
+
+
+
+
+
+
+
 
 ## Coming soon
 
@@ -148,7 +310,12 @@ Our audience / users: those those making 'package inclusion' requests for GxP en
 ::: columns
 ::: {.column width="30%" style="font-size:28px"}
 <!-- A suite of hands-on review tools (from our friends at GSK) will allow users to browse unit tests, source code, and man (doc) pages for any exported function. -->
-<p style="font-size:28px"> A suite of hands-on review tools (from our friends at GSK) will allow users to browse unit tests, source code, and man (doc) pages for any exported function.</p>
+
+<p style="font-size:28px">
+
+A suite of hands-on review tools (from our friends at GSK) will allow users to browse unit tests, source code, and man (doc) pages for any exported function.
+
+</p>
 :::
 
 ::: {.column width="70%"}
@@ -156,8 +323,25 @@ Our audience / users: those those making 'package inclusion' requests for GxP en
 :::
 :::
 
+
+
+
+
+
+
+
+
 ## Dev Team
 
 ![](images/team.png)
 
+
+
+
+
 ## Q & A
+
+
+
+
+
