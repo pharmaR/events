@@ -1,0 +1,544 @@
+---
+author: "Eric Milliman"
+format: rvalhub-revealjs
+title: "Part 1: {riskmetric} & {riskassessment} - a mini series for end-to-end R package validation"
+html:
+    self-contained: true
+    fontsize: 30
+editor_options: 
+  chunk_output_type: console
+---
+
+## Disclaimer
+
+<br><br><br>
+
+*Any opinions expressed in this presentation and on the following slides are solely those of the presenter and do not necessarily reflect those sponsoring the work*
+
+## 
+
+![](images/pharmaRlogo.png){fig-align="center" fig-height="150"}
+
+::: columns
+::: {.column width="90%"}
+-   Group of \~50 companies (mostly pharma & biotech)
+
+-   <b>Mission:</b> Enable the use of R by the Bio-Pharmaceutical industry in a regulatory setting, where the output may be used in submissions to regulatory agencies.
+:::
+:::
+
+## Two tools: what do they do
+
+::: columns
+::: {.column width="20%"}
+![](images/riskmetric_logo.png) <br><br> ![](images/riskassessment_logo.png)
+:::
+
+::: {.column width="75%" style="font-size:28px"}
+is a framework to quantify an R package's "risk" by assessing several meaningful metrics designed to evaluate package development best practices, code documentation, community engagement, and development sustainability.<br><br><br> is a full-fledged R package containing a shiny front-end that augments the utility of `{riskmetric}`. The application's goal is to provide a central hub for an organization to review and assess the risk of R packages, providing handy tools and guide rails along the way.
+:::
+:::
+
+## A primer on risk
+
+::: columns
+::: {.column width="50%"}
+-   Risk is a combination of quality and intended use and culture
+    -   Biogen has 3 levels of risk: death, rev/temp harm or no harm to patients
+-   Quality is one way to mitigate risk
+-   High quality software can still be high risk
+:::
+
+::: {.column width="50%"}
+![](images/risk_chart.png)
+:::
+:::
+
+## Criteria to quantify risk {.scrollable}
+
+![](images/Picture3.jpg){fig-align="center"}
+<br>
+Sometimes "quality" is measurable! Software dev best practices dictate an R-package should have:<br>
+
+-   A license
+-   Source code available for browsing
+-   An easy to contact maintainer
+-   A place to report bugs
+-   Evidence that new bugs are being addressed
+-   Complete Function documentation
+-   Test coverage
+-   Community usage
+
+18 total assessments (to date)!
+
+## Getting started
+
+```{r}
+#| warning: false
+#| message: false
+#| echo: true
+
+library(dplyr)
+library(tidyr)
+devtools::load_all("~/riskmetric/")
+
+(pkgRef <- pkg_ref(c("~/package_sources/accrual/", "dplyr", "tools", "arules", "limma")) %>%
+  pkg_assess() %>%
+  pkg_score())
+
+```
+
+## The internals of riskmetric 
+
+![](images/Picture2.png){fig-align="center" width=30%}
+
+::: columns
+::: {.column width="50%" style="font-size:26px"}
+-   `pkg_ref` (class) and `pkg_ref_cache` (func)
+    -   Collects metadata from different sources
+    -   Stores raw metadata
+    -   Lazy evaluation of metadata
+
+:::
+
+::: {.column width="50%" style="font-size:26px"}
+
+:::
+:::
+
+## The internals of riskmetric 
+
+![](images/Picture2.png){fig-align="center" width=30%}
+
+::: columns
+::: {.column width="50%" style="font-size:26px"}
+-   `pkg_ref` (class) and `pkg_ref_cache` (func)
+    -   Collects metadata from different sources
+    -   Stores raw metadata
+    -   Lazy evaluation of metadata
+-   `pkg_assess` (class) and `assess\_\*` (function)
+    -   Tabular summary of metadata
+    -   e.g. Number or Errors/Warnings/Notes from R CMD check
+:::
+
+::: {.column width="50%" style="font-size:26px"}
+
+:::
+:::
+
+## The internals of riskmetric
+
+![](images/Picture2.png){fig-align="center" width=30%}
+
+::: columns
+::: {.column width="50%" style="font-size:26px"}
+-   `pkg_ref` (class) and `pkg_ref_cache` (func)
+    -   Collects metadata from different sources
+    -   Stores raw metadata
+    -   Lazy evaluation of metadata
+-   `pkg_assess` (class) and `assess\_\*` (function)
+    -   Tabular summary of metadata
+    -   e.g. Number or Errors/Warnings/Notes from R CMD check
+:::
+
+::: {.column width="50%" style="font-size:26px"}
+-   `pkg_metric` (class) and `metric_score` (func)
+    -   Per assessment score
+    -   \[0,1\] bound
+    -   Multiple metrics per assessment possible
+
+:::
+:::
+
+## The internals of riskmetric 
+
+![](images/Picture2.png){fig-align="center" width=30%}
+
+::: columns
+::: {.column width="50%" style="font-size:26px"}
+-   `pkg_ref` (class) and `pkg_ref_cache` (func)
+    -   Collects metadata from different sources
+    -   Stores raw metadata
+    -   Lazy evaluation of metadata
+-   `pkg_assess` (class) and `assess\_\*` (function)
+    -   Tabular summary of metadata
+    -   e.g. Number or Errors/Warnings/Notes from R CMD check
+:::
+
+::: {.column width="50%" style="font-size:26px"}
+-   `pkg_metric` (class) and `metric_score` (func)
+    -   Per assessment score
+    -   \[0,1\] bound
+    -   Multiple metrics per assessment possible
+-   `pkg_score` (class/func)
+    -   Summary of metric scores
+    -   \[0,1\] bound
+    -   Can customize weights of custom metrics
+:::
+:::
+
+## Things to consider when using `{riskmetric}` {.scrollable auto-animate=true}
+
+-   Package source
+    -     Not all metrics are available for all types of package sources
+    -     `pkg_ref()` can generate a list of mixed source's 
+
+## Things to consider when using `{riskmetric}` {.scrollable auto-animate=true}
+
+-   Package source
+    -     Not all metrics are available for all types of package sources
+    -     `pkg_ref()` can generate a list of mixed source's 
+-   Missing information
+    -    Metric only implemented for `pkg_ref`'s of specific source type
+         -    e.g. code coverage only available for `pkg_ref.pkg_source`
+    -    Parsing error -- generally handled by `{riskmetric}`
+    -    Metric not expected because metadata missing
+         -    e.g. package does not have bug_reporting_url. Would not expect to have compute a bug closures over the last 30 days.
+    
+## Things to consider when using `{riskmetric}` {.scrollable auto-animate=true}
+
+-   Package source
+    -     Not all metrics are available for all types of package sources
+    -     `pkg_ref()` can generate a list of mixed source's 
+-   Missing information
+    -    Metric only implemented for `pkg_ref`'s of specific source type
+         -    e.g. code coverage only available for `pkg_ref.pkg_source`
+    -    Parsing error -- generally handled by `{riskmetric}`
+    -    Metric not expected because metadata missing
+         -    e.g. package does not have bug_reporting_url. Would not expect to have compute a bug closures over the last 30 days.
+-   Metric weights
+    -    Weights are applied to all `pkg_metric` regardless of source type. 
+    ```{r}
+    pkgRef[,c("pkg_ref","version","remote_checks","r_cmd_check", "size_codebase")]
+    ```
+    
+## Current Roadmap {auto-animate=true}
+
+::: {style="font-size:26px"}
+1.  Increase ease of use
+    1.  Convenient wrapper functions
+    2.  helpful messaging
+    3.  Cleaner reporting/output
+:::
+
+## Current Roadmap {auto-animate=true .scrollable}
+
+::: {style="font-size:26px"}
+1.  Increase ease of use
+    1.  Convenient wrapper functions
+    2.  helpful messaging
+    3.  Cleaner reporting/output
+2.  Completeness
+```{r}
+    ns <- getNamespaceExports("riskmetric")
+
+    ns <- grep("^pkg_ref_cache|^assess_", ns, value = T, 
+               ignore.case = T)
+    ns <- sapply(ns, methods)
+
+    ns_df <- tibble(export=unlist(ns)) %>%
+      bind_rows(tibble(export=names(ns)[sapply(ns, length)==0])) %>% 
+      separate(export, c("generic", "cache", "class"), 
+               sep = "\\.", remove = F)
+
+    ns_df %>% filter(grepl("assess", generic)) %>%
+      select(generic, class=cache) %>%
+      mutate(value=1) %>%
+      pivot_wider(names_from = class, values_from = value) %>% 
+      mutate(default = coalesce(default, `NA`)) %>% 
+      select(generic, default, everything(), -`NA`)
+    ```
+:::
+
+## Current Roadmap {auto-animate=true .scrollable}
+
+::: {style="font-size:26px"}
+1.  Increase ease of use
+    1.  Convenient wrapper functions
+    2.  helpful messaging
+    3.  Cleaner reporting/output
+2.  Completeness
+    1.  Consistency in source -\> assessment -\> metric
+    2.  Chain sources to increase metric coverage for analysis
+
+    ```{r}
+    #| label: "Proposed package source dependency"
+    library(igraph)
+    library(ggraph)
+    #set_graph_style(plot_margin = margin(3,1,3,1))
+    g <- graph_from_data_frame(data.frame(from=c("pkg_cran_remote","pkg_cran_remote",
+                                                 "pkg_bioc_remote", "pkg_bioc_remote",
+                                                 "pkg_remote", "pkg_remote",
+                                                 "pkg_source"),
+                                          to = c("pkg_source", "pkg_install",
+                                                 "pkg_source", "pkg_install",
+                                                 "pkg_source", "pkg_install",
+                                                 "pkg_install")), directed = T)
+    
+    p1 <- ggraph(g, 'igraph', algorithm="kk") + 
+      geom_edge_link(arrow = arrow(length = unit(4, 'mm')), 
+                      end_cap = circle(4, 'mm')) +
+      geom_node_point(size=8, alpha=0.2) + 
+      geom_node_text(aes(label = name), size = 4, repel = TRUE)
+    print(p1)
+    ```
+:::
+
+## Current Roadmap {auto-animate=true}
+
+::: {style="font-size:26px"}
+1.  Increase ease of use
+    1.  Convenient wrapper functions
+    2.  helpful messaging
+    3.  Cleaner reporting/output
+2.  Completeness
+    1.  Consistency in source -\> assessment -\> metric
+    2.  Chain sources to increase metric coverage for analysis
+3.  3rd party metrics
+    1.  Assessments/Metrics that are executed only if package dependencies are installed
+        1.  oysteR, srr, autotest, pkgnet, valtools
+    2.  *ad hoc* assessments and/or metrics
+:::
+
+## Current Roadmap {auto-animate=true}
+
+::: {style="font-size:26px"}
+1.  Increase ease of use
+    1.  Convenient wrapper functions
+    2.  helpful messaging
+    3.  Cleaner reporting/output
+2.  Completeness
+    1.  Consistency in source -\> assessment -\> metric
+    2.  Chain sources to increase metric coverage for analysis
+3.  3rd party metrics
+    1.  Assessments/Metrics that are executed only if package dependencies are installed
+        1.  oysteR, srr, autotest, pkgnet, valtools
+    2.  *ad hoc* assessments and/or metrics
+4.  Cohorts -- collections of packages
+    1.  A set of packages (e.g. `tidyverse`)
+    2.  An environment (base, priority, plus packages required by the business)
+:::
+
+## How to contribute
+
+-    [File issues](https://github.com/pharmaR/riskmetric/issues)
+-    Fix bugs
+-    [Propose a metric](https://github.com/pharmaR/riskmetric/issues?q=is%3Aissue+is%3Aopen+label%3A%22Metric+Proposal%22)
+-    [Contribute a metric](https://pharmar.github.io/riskmetric/articles/extending-riskmetric.html)
+
+## What makes a good metric {auto-animate=true}
+
+1.  Self-contained
+    1.  License compatibility with dependencies
+
+## What makes a good metric {auto-animate=true}
+
+1.  Self-contained
+    1.  License compatibility with dependencies
+2.  Is environment agnostic
+    1.  `R CMD check`
+
+## What makes a good metric {auto-animate=true}
+
+1.  Self-contained
+    1.  License compatibility with dependencies
+2.  Is environment agnostic
+    1.  `R CMD check`
+3.  Has clear interpretation
+    1.  Version release frequency
+    
+## What makes a good metric {auto-animate=true}
+
+1.  Self-contained
+    1.  License compatibility with dependencies
+2.  Is environment agnostic
+    1.  `R CMD check`
+3.  Has clear interpretation
+    1.  Version release frequency
+4.  Can be represented numerically
+
+## A new package and resource `{riskscore}`
+
+::: {style="font-size:28px"}
+
+:::
+
+## A new package and resource `{riskscore}`
+
+::: {style="font-size:28px"}
+-   currently in alpha on github
+    -   Needs to be QC'd
+    -   make sure API rate limits haven't created missing values or errors
+    -   plans to add df of assessments
+:::
+
+## A new package and resource `{riskscore}`
+
+::: {style="font-size:28px"}
+-   currently in alpha on github
+    -   Needs to be QC'd
+    -   make sure API rate limits haven't created missing values or errors
+    -   plans to add df of assessments
+-   only covers CRAN using the `pkg_cran` reference source
+
+:::
+
+## A new package and resource `{riskscore}`
+
+::: {style="font-size:28px"}
+-   currently in alpha on github
+    -   Needs to be QC'd
+    -   make sure API rate limits haven't created missing values or errors
+    -   plans to add df of assessments
+-   only covers CRAN using the `pkg_cran` reference source
+-   A community resource
+    -   help to contextualize riskscores for users
+    -   Will also help dev team (scoring changes, edge cases, etc)
+:::
+
+## A new package and resource `{riskscore}`
+
+::: {style="font-size:28px"}
+-   currently in alpha on github
+    -   Needs to be QC'd
+    -   make sure API rate limits haven't created missing values or errors
+    -   plans to add df of assessments
+-   only covers CRAN using the `pkg_cran` reference source
+-   A community resource
+    -   help to contextualize riskscores for users
+    -   Will also help dev team (scoring changes, edge cases, etc)
+-   Not a replacement for doing your own riskassessment
+:::
+
+## Some insights from `{riskscore}`
+
+```{r}
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+load("~/riskscore/data/v0.2.1_cran_20230621.rda")
+
+df <- v0.2.1_cran_20230621
+df <- df[, colMeans(is.na(df))<1]
+df %>% ggplot(aes(x=pkg_score)) + geom_density() + labs(x="{riskmetric} package score")
+
+```
+
+## Some insights from `{riskscore}`
+
+![](images/risk_scores_by_group_all_cran.png)
+
+## Missingness
+
+```{r}
+df %>% 
+  pivot_longer(cols = news_current:has_source_control,
+               values_transform = as.numeric) %>% 
+  ggplot(aes(x=is.na(value))) + geom_bar() +
+  facet_wrap(vars(name), nrow = 3, scales="free_y") + 
+  labs(x="Is missing", title = "Missingness within metric scores")
+
+```
+
+## Binary Metrics
+
+```{r}
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(ggbeeswarm)
+load("~/riskscore/data/v0.2.1_cran_20230621.rda")
+
+df %>% 
+  pivot_longer(cols = news_current:has_source_control,
+               values_transform = as.numeric) %>% 
+  filter(!is.na(value) & grepl("^has_|^news", name)) %>% 
+  ggplot(aes(x=as.factor(value))) + geom_bar() +
+  facet_wrap(vars(name), nrow = 3, scales="free_y") + 
+  labs(x="Metric Score")
+```
+
+## Pakcage risk correlates with metrics
+
+```{r}
+df %>% 
+  pivot_longer(cols = news_current:has_source_control,
+               values_transform = as.numeric) %>% 
+  filter(!is.na(value) & grepl("^has_|^news", name)) %>% 
+  ggplot(aes(x=as.factor(value), y=pkg_score)) + 
+  geom_quasirandom() +
+  labs(x="Metric Score", y="Risk Score") +
+  facet_wrap(vars(name), nrow = 3, scales="free_y")
+```
+
+## Metrics with continuous scores
+
+```{r}
+df %>% 
+  pivot_longer(cols = news_current:has_source_control,
+               values_transform = as.numeric) %>% 
+  filter(!is.na(value) & !grepl("^has_|^news", name)) %>% 
+  ggplot(aes(x=value)) + geom_density() +
+  facet_wrap(vars(name), nrow = 3, scales="free_y") +
+  labs(x="Metric Score")
+```
+
+## Metric score correlation with risk score
+
+```{r}
+df %>% 
+  pivot_longer(cols = news_current:has_source_control,
+               values_transform = as.numeric) %>% 
+  filter(!is.na(value) & !grepl("^has_|^news", name)) %>% 
+  ggplot(aes(x=value, y=pkg_score)) + 
+  geom_hex() +
+  labs(x="Metric Score", y="Risk Score") +
+  facet_wrap(vars(name), nrow = 3, scales="free_y")
+```
+
+## Package clusters
+
+```{r}
+anno_colors <- list(pkg_score=c("gray95","blue4"))
+pheatmap::pheatmap(df[, -c(1:5)], show_rownames = F,
+                   border_color = NA)
+```
+
+## 
+
+```{r}
+grps <- cutree(hclust(dist(df[, -c(1:5)])), k=6)
+
+df %>% 
+  mutate(k=grps) %>% 
+  ggplot(aes(x=k, y=pkg_score)) + 
+  geom_quasirandom() + 
+  labs(y="Risk score", x="Cluster group")
+```
+
+## Dev Team
+
+::: columns
+::: {.column width="50%"}
+-   Current Contributors
+    -   Eli Miller - Artorus
+    -   Sheng Wei - J&J
+    -   Sam Parsam - Pfizer
+    -   Narayan Iyer - Pfizer
+    -   Andrew Borgman - Biogen
+:::
+
+::: {.column width="50%"}
+-   Past Contributors
+    -   Doug Kelkhoff - Genentech
+    -   Yilong Zhang - Meta
+    -   Marly Cormar - Apple
+    -   Kevin Kunzmann - Boehringer Ingelheim
+:::
+:::
+
+## 
+
+::: {style="display: flex; justify-content: center; align-items: center; font-size: 48px"}
+<br><br><br><br><br> Thank you!
+:::
