@@ -44,6 +44,20 @@ Aaron Clark, 16 Aug 2023
 
 
 
+## Agenda
+
+* Quick Intro to `{riskmetric}` / `{riskassessment}`
+
+* Why create a shiny app?
+
+* Latest enhancements
+
+* Demo
+
+* Coming soon
+
+* Q&A
+
 
 
 
@@ -121,7 +135,12 @@ Sometimes "quality" is measurable! Software dev best practices dictate an R-pack
 
 
 
-## Why create a Shiny app?
+
+
+
+
+
+## Why create a Shiny app? {auto-animate=true .scrollable}
 
 ::: columns
 ::: {.column width="20%"}
@@ -129,60 +148,287 @@ Sometimes "quality" is measurable! Software dev best practices dictate an R-pack
 :::
 
 ::: {.column width="80%"}
-<!-- The app extends the functionality of {riskmetric} by managing the review process <b>within an organizational context</b>, empowering the reviewer to: <br> -->
+::: {style="font-size:24px" .incremental}
+<br><b>Main goal</b>: help those those making "package inclusion" requests for GxP environments. So, the app's highest and best use is all about two things:
+
+- Forcing org members to take responsibility for assessing package risk themselves prior to making an IT request
+- Generating a summary report for IT that shows the requester has done their due diligence meeting inclusion requirements
+
+
+:::
+:::
+:::
+
+. . .
+
+![](images/user_to_example_report_to_it_sm.png)
+
+
+
+
+
+## Why create a Shiny app? (cont'd)
+
+::: columns
+::: {.column width="20%"}
+![](images/riskassessment_logo.png)
+:::
+
+::: {.column width="80%"}
+::: {style="font-size:24px" .incremental}
+<b>Main goal</b>: help those those making "package inclusion" requests for GxP environments. They need support to...
+
+-   Provide a platform for package exploration without the need to write any custom `{riskmetric}`
+-   Run `{riskmetric}` on the same machine with the same environment -- creating a central hub for reproducibility
+-   Maintain consistent, org-specific settings/options when producing risk outputs
+-   Automate a risk-based "decision triage" based on pre-defined rules, saving time & effort
+-   Manage who's involved in the review process via user authentication & role management
+-   Facilitate and store user summaries & communication, on certain packages and/or certain metrics
+-   Generate risk summary reports, for sharing with the decision making parties
+:::
+:::
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Latest features (v2.0.0)
+
+::: {style="font-size:28px" .incremental}
+Most notably:
+
+* Face lift to the `'Report Builder'` & `'Database View'`
+* Better support to analyze dependencies
+* More org-level customization, including the use of a configuration file 
+* Allow `admin` users to edit roles and privileges on the fly
+* Allow users to explore source contents of package
+
+:::
+
+. . .
 
 ::: {style="font-size:28px"}
-Our audience / users: those those making 'package inclusion' requests for GxP environments. They need support to...
+<br>
+The feedback loop is crucial! Submit an issue on GitHub today.
 
---
+![](images/github.png)
 
--   Generate consistent, org-specific analysis of risk outputs & a means for package exploration without the need to write R code
-
---
-
--   Run `{riskmetric}` on the same machine with the same environment -- creating a central hub for reproducibility
-
---
-
--   Automate 'decision triage' based on pre-defined rules, saving time & mental energy
-
---
-
--   Manage who's involved in the review process with user authentication with user role management
-
---
-
--   Facilitate and store communication between many users, on certain packages and/or metrics
-
---
-
--   Generate risk summary reports, with opportunity to inject opinions, for sharing with the decision making parties
-:::
-:::
 :::
 
 
 
 
-## Why create a Shiny app?
 
-Highest and best use of the app? It's all about two things:
+## Latest: `'Report Builder'` Face Lift {.scrollable}
 
-- forcing org members to take responsibility for assessing package risk themselves prior to making an IT request
-- generating a summary report for IT that shows the requestor has done their due diligence meeting inclusion requirements
-
-`[pic of example report and arrow to ppm]`
+::: {style="font-size:32px" .incremental}
+* A more holistic Report Builder! Allowing users to define what content shows up in the report.
 
 
-## An exercise: Review the XYZ package
+* Users can now compose a long form "Package Summary" to keep track of more pertinent items (perhaps non-`{riskmetric}` items) for a more rounded package review.
+:::
+
+. . . 
+  
+
+![](images/report_builder.gif)
+  
+  
+  
+  
+  
+  
+## Latest: `'Database View'` Face Lift {.scrollable}
+  
+
+::: {style="font-size:28px" .incremental}
+More useful content to ingest!
+
+  * A summary of uploaded packages
+  * Date uploaded
+  * Decision-related columns like the decision time stamp & decision source
+  * Easily downloadable
+  
+:::
+
+. . .
+
+
+![](images/uploaded_pkgs.png)
+
+
+  
+  
+
+## Latest: Package Dependencies {.scrollable}
+
+
+![](images/dependencies.png)
+  
+![](images/rev_dependencies.png)
+  
+  
+  
+  
+## Latest: org-level settings {.scrollable}
+
+
+::: {style="font-size:24px" .incremental}
+Edit in-app or via the config file! What's new?
+
+* Customize decision categories & colors
+* Toggle decision automation rules
+* User roles/privileges
+* Initialize metric weights
+
+:::
+
+. . .
+
+::: {style="font-size:24px"}
+Example config (YML) file:
+
+```yml
+default:
+  assessment_db: database.sqlite
+  loggit_json: loggit.json
+  credential_db: credentials.sqlite
+  credentials:
+    roles:
+      - admin
+      - lead
+      - reviewer
+      - viewer
+    privileges:
+      admin: [admin, weight_adjust, auto_decision_adjust, final_decision, revert_decision, add_package, delete_package, overall_comment, general_comment]
+      lead: [weight_adjust, auto_decision_adjust, final_decision, revert_decision, add_package, delete_package, overall_comment, general_comment]
+      reviewer: [add_package, general_comment]
+      viewer:
+  decisions:
+    categories:
+      - Low Risk
+      - Medium Risk
+      - High Risk
+    rules:
+      Medium Risk:
+        - .398
+        - .639
+      High Risk:
+        - .639
+        - 1
+    colors:
+      Medium Risk: !expr grDevices::rgb(52, 235, 229, maxColorValue = 255)
+  metric_weights:
+    covr_coverage: 0
+    has_vignettes: 2
+```
+
+<br>
+<br>
+
+Automated a risk-based "decision triage" based on pre-defined rules, saving time & effort
+
+
+
+![](images/decision_rules.png)
+
+Decisions impacted upon pkg upload:
+
+![](images/uploaded_pkgs_med.png)
+
+:::
+
+
+
+
+
+
+## Latest: Edit Roles & Privileges {.scrollable}
+
+::: {style="font-size:28px"}
+Manage who's involved in the review process via user authentication & role management
+
+![](images/add_edit_users.png)
+
+![](images/roles_privileges.png)
+
+![](images/edit_roles.png)
+
+:::
+
+
+
+
+
+## Latest: Explore Package Source Code {.scrollable}
+
+
+::: {style="font-size:28px"}
+Augment {riskmetric} evaluation with a more manual package review process by browsing source code
+
+
+![](images/source_explorer.png)
+![](images/source_explorer_tests.png)
+
+
+:::
+
+
+
+
+
+
+## Latest features recap (v2.0.0)
+
+::: {style="font-size:28px"}
+Most notably:
+
+* Face lift to the `'Report Builder'` & `'Database View'`
+* Better support to analyze dependencies
+* More org-level customization, including the use of a configuration file 
+* Allow `admin` users to edit roles and privileges on the fly
+* Allow users to explore source contents of package
+
+
+<br>
+
+The feedback loop is crucial! Submit an issue on GitHub today.
+
+![](images/github.png)
+
+:::
+
+
+
+
+
+
+
+
+## An exercise: Review the `{prodlim}` package
 
 ::: columns
 ::: {.column width="20%"}
 ![](images/riskassessment_logo_large.png)
 :::
 
-::: {.column width="80%" style="font-size:56px"}
-<br> [Shinyapps.io](https://rinpharma.shinyapps.io/riskassessment_v100_dev/)
+::: {.column width="80%" style="font-size:48px"}
+<br> Demo on [Shinyapps.io](https://rinpharma.shinyapps.io/riskassessment_v200/)!
+
+<br> Test drive now: [bit.ly/raa_demo](https://rinpharma.shinyapps.io/riskassessment_v200/)
 :::
 :::
 
@@ -193,107 +439,16 @@ Highest and best use of the app? It's all about two things:
 
 
 
-## Latest features of v2.0.0
-
-Most notably:
-
-* Face lift to the `'Report Builder'` & `'Database View'`
-* Better support to analyze dependencies
-* Added unparalleled customization, including the use of a configuration file 
-* Allow `admin` users to edit roles and privileges on the fly
-* Allow users to explore source contents of package
-
-The feedback loop is crucial! Submit an issue on GitHub today.
-
-
-
-
-
-
-
-
-## Latest: `'Report Builder'` Face Lift
-
-* A more holistic Report Builder. This allows users to define what content shows up in the report (#348).
-
-* Users can now compose a long form "Package Summary" to keep track of more pertinent items (perhaps items less central to {riskmetric} output) for a more rounded package review (#348).
-  
-  
-## Latest: `'Database View'` Face Lift
-  
-
-* More useful content
-
-  * Date uploaded
-  * Decision-related columns like the decision time stamp & decision source
-  
-* Introduced the decision category table
-
-
-  
-  
-  
-  
-  
-  
-  
-  
-## Latest: Set custom org-level settings
-
-Customizable either in-app or via the config file. What are the changes?
-
-* Added decision categories
-  * Added decision automation rules
-  * Added log file designation
-  * Implemented user roles/privileges to allow for more granular access to actions in the application
-  * Allow metric weights to be initialized
-  * Custom colors
-
-
-
-
-
-
-
-
-## Latest: Edit Roles & Privileges
-
-
-
-
-
-
-
-
-## Latest: Explore Package Source Code
-
-* More manual package review process
-
-
-
-
-
-
-
-## Coming soon
+## Coming soon {.scrollable}
 
 #### {riskscore}
 
-::: columns
-::: {.column width="30%" style="font-size:28px"}
-<!-- In it's early stages, a new data package containing the `{riskmetric}` assessments & scores for all packages on CRAN. -->
-
-<p style="font-size:28px">
-
+::: {style="font-size:32px" }
 In it's early stages, a new data package containing the `{riskmetric}` assessments & scores for all packages on CRAN.
 
-</p>
-:::
-
-::: {.column width="70%"}
 ![](images/risk_scores_by_group_all_cran.png)
+
 :::
-:::
 
 
 
@@ -302,25 +457,16 @@ In it's early stages, a new data package containing the `{riskmetric}` assessmen
 
 
 
-
-## Coming soon
+## Coming soon {.scrollable}
 
 #### Package Explorer
 
-::: columns
-::: {.column width="30%" style="font-size:28px"}
-<!-- A suite of hands-on review tools (from our friends at GSK) will allow users to browse unit tests, source code, and man (doc) pages for any exported function. -->
-
-<p style="font-size:28px">
+::: {style="font-size:32px" }
 
 A suite of hands-on review tools (from our friends at GSK) will allow users to browse unit tests, source code, and man (doc) pages for any exported function.
 
-</p>
-:::
-
-::: {.column width="70%"}
 ![](images/pkg_explorer.png)
-:::
+
 :::
 
 
@@ -339,9 +485,41 @@ A suite of hands-on review tools (from our friends at GSK) will allow users to b
 
 
 
-## Q & A
+## Q & A {.scrollable}
 
 
 
+::: columns
+::: {.column width="10%"}
+<br>
+:::
+
+::: {.column width="30%" style="font-size:32px"}
+
+<!-- ![](images/riskassessment_logo.png) -->
+<img src="images/riskassessment_logo.png" height="172" style="height:172px; margin-left:15px"/>
+
+bit.ly/raa_demo
+
+![](images/github_no_margin.png)
+
+bit.ly/raa_gh
+
+:::
+
+::: {.column width="30%" style="font-size:32px" }
+
+
+![](images/google_forms.png)
+
+bit.ly/raa_survey<br>
+
+
+![](images/pharmar_logo_sm.png)
+
+pharmar.org/
+
+:::
+:::
 
 
