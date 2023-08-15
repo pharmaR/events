@@ -490,16 +490,16 @@ A suite of hands-on review tools (from our friends at GSK) will allow users to b
 
 
 ::: columns
-::: {.column width="10%"}
-<br>
-:::
+<!-- ::: {.column width="10%"} -->
+<!-- <br> -->
+<!-- ::: -->
 
-::: {.column width="30%" style="font-size:32px"}
+::: {.column width="50%" style="font-size:32px"}
 
 <!-- ![](images/riskassessment_logo.png) -->
 <img src="images/riskassessment_logo.png" height="172" style="height:172px; margin-left:15px"/>
 
-bit.ly/raa_demo
+bit.ly/raa_demo<br>
 
 ![](images/github_no_margin.png)
 
@@ -507,7 +507,7 @@ bit.ly/raa_gh
 
 :::
 
-::: {.column width="30%" style="font-size:32px" }
+::: {.column width="50%" style="font-size:32px" }
 
 
 ![](images/google_forms.png)
