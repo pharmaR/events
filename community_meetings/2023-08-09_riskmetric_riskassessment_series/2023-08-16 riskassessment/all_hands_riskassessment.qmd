@@ -50,7 +50,7 @@ Aaron Clark, 16 Aug 2023
 
 * Why create a shiny app?
 
-* Latest enhancements
+* `Latest enhancements`
 
 * Demo
 
@@ -149,7 +149,7 @@ Sometimes "quality" is measurable! Software dev best practices dictate an R-pack
 
 ::: {.column width="80%"}
 ::: {style="font-size:24px" .incremental}
-<br><b>Main goal</b>: help those those making "package inclusion" requests for GxP environments. So, the app's highest and best use is all about two things:
+<br><b>Main goal</b>: help those making "package inclusion" requests for GxP environments. So, the app's highest and best use is all about two things:
 
 - Forcing org members to take responsibility for assessing package risk themselves prior to making an IT request
 - Generating a summary report for IT that shows the requester has done their due diligence meeting inclusion requirements
@@ -512,7 +512,7 @@ bit.ly/raa_gh
 
 ![](images/google_forms.png)
 
-bit.ly/raa_survey<br>
+bit.ly/risk_survey<br>
 
 
 ![](images/pharmar_logo_sm.png)
