@@ -1,0 +1,6 @@
+[submodule "events-positconf2023"]
+	path = events-positconf2023
+	url = https://github.com/pharmar/events-positconf2023
+[submodule "positconf2023"]
+	path = positconf2023
+	url = https://github.com/pharmar/events-positconf2023
