@@ -1,0 +1,158 @@
+# 👋 Who We Are {transition="none-in slide-out"}
+
+```{=html}
+<style>
+.panel {
+  font-size: 0.6em;
+  background: rgba(0.75, 0.75, 0.75, 0.1);
+  padding: 1%;
+  margin: 1%;
+  border-radius: 0.5em;
+  border-bottom: solid 0.2em rgba(1, 1, 1, 0.1);
+}
+
+.center {
+  --r-heading-margin: auto;
+  width: fit-content;
+}
+
+.person {
+  font-weight: bold;
+  font-size: 0.8em;
+  margin: 1em 0 0.5em 0;
+}
+
+.person p {
+  display: inline;
+}
+
+.person:before {
+  display: inline;
+  content: "👤 ";
+}
+
+.badge-pill {
+  font-weight: bold;
+  background: var(--r-link-color);
+  color: white;
+  border-radius: 1em;
+  padding: 0 0.5em;
+}
+</style>
+```
+
+::: { style="font-size: 0.7em;" }
+> The ***R Validation Hub*** is a collaboration to support the adoption of R
+> within a biopharmaceutical regulatory setting ([pharmaR.org](https://www.pharmaR.org))
+:::
+
+* Grew out of **R/Pharma 2018**
+* Led by participants from **~10 organizations**
+* R Consortium Working Group
+* With frequent involvement from health authorities (primarily the FDA)
+* And subscribers from **~60 organizations** spanning multiple industries
+
+## 🤝 Affiliates: ![](assets/r-consortium.png){height="1.2em" style="padding: 0.2em; margin: 0 0.5em 0 0; border-radius: 0.8em; background: #FFF; vertical-align: middle;"} [R Consortium]{.hidden} {transition="slide-in slide-out"}
+
+::: {style="font-size: 0.7em"}
+> Works with and provides support to the R Foundation and to the key
+> organizations developing, maintaining, distributing and using R software
+:::
+
+## 🤝 Affiliates: ![](assets/camis.png){height="1.2em" width="1.2em" style="margin: 0 0.2em; border-radius: 50%; object-fit: cover; background: #CBC; vertical-align: middle;"} PSI/AIMS (CAMIS) {transition="slide-in slide-out"}
+
+::::: {.columns}
+:::: {.column width="65%"}
+::: { style="font-size: 0.6em;" }
+> **C**omparing **A**nalysis **M**ethod **I**mplementations in **S**oftware  
+> A cross-industry group formed of members from PHUSE, PSI, and ASA.
+:::
+
+::: { style="font-size: 0.7em;" }
+- Released a [white paper](https://phuse.s3.eu-central-1.amazonaws.com/Deliverables/Data+Visualisation+%26+Open+Source+Technology/WP077.pdf) providing guidance on appropriate use of stats methods, for example:
+  * Don't default to the defaults
+  * Be specific when drafting analysis plans, including precise methods & options
+- Currently building a repository of methods comparisons at 
+  [psiaims.github.io/CAMIS](https://psiaims.github.io/CAMIS/).
+- Check out their 
+  [contributors page](https://psiaims.github.io/CAMIS/contribution.html) to 
+  learn how you can get involved!
+:::
+::::
+
+## 🤝 Affiliates: ![](assets/r-consortium.png){height="1.2em" style="padding: 0.2em; margin: 0 0.5em 0 0; border-radius: 0.8em; background: #FFF; vertical-align: middle;"} [R Consortium]{.hidden} {transition="slide-in slide-out"}
+
+::: {style="font-size: 0.7em"}
+> Works with and provides support to the R Foundation and to the key
+> organizations developing, maintaining, distributing and using R software
+:::
+
+* The R Validation Hub
+* R Submission Working Group
+* R Repositories Working Group (ie CRAN enhancements, future development)
+
+## 👷‍♂️ What We Do ([pharmaR.org](https://www.pharmaR.org)) {transition="slide-in slide-out"}
+
+<!-- ### Products {.center} -->
+
+::::: {.columns}
+:::: {.column width="29%" .panel}
+#### White Paper
+Guidance on compliant use of R and management of packages
+::::
+
+:::: {.column width="29%" .panel}
+#### [New!]{.badge-pill} Repositories
+
+Building a public, validation-ready resource for R packages  
+
+::: {.person}
+Coline Zeballos
+:::
+::::
+
+:::: {.column width="29%" .panel}
+#### [New!]{.badge-pill} Communications
+
+Connecting validation experts across the industry
+
+::: {.person}
+Juliane Manitz
+:::
+::::
+:::::
+
+::::: {.columns}
+:::: {.column width="29%" .panel}
+#### [`{riskmetric}`](https://github.com/pharmaR/riskmetric)
+
+Gather and report on risk heuristics to support validation decision-making
+
+::: {.person}
+Eric Milliman
+:::
+::::
+
+:::: {.column width="29%" .panel}
+#### [`{riskassessment}`](https://github.com/pharmaR/riskassessment)
+
+A web interface to `{riskmetric}`, supporting review,
+annotation and cataloging of decisions
+
+::: {.person}
+Aaron Clark
+:::
+::::
+
+:::: {.column width="29%" .panel}
+#### [New!]{.badge-pill} [`{riskscore}`](https://github.com/pharmaR/riskscore)
+
+An R data package capturing risk metrics across all of CRAN
+
+::: {.person}
+Aaron Clark
+:::
+::::
+:::::
+
+

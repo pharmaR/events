@@ -1,0 +1,377 @@
+
+# 📦 Repositories
+
+## Repositories Workstream
+
+::: { style="font-size: 0.8em;" }
+> Supporting a transparent, open, dynamic, cross-industry approach of
+> establishing and maintaining a _repository_ of R packages.
+
+* Taking ample time to engage stakeholders
+  * Validation leads across the industry
+  * Active health authority involvement
+  * Analytic environment admins and developers
+* Considering the possibilities
+  * Mapping needs to solutions that meet the industry where it is
+  * ...while building the path for it to move forward
+:::
+
+
+## How did we get here?
+
+::: {.incremental style="font-size: 0.8em;"}
+* [Our whitepaper is widely adopted]{.fragment .semi-fade-out}
+* [But implementing it is inconsistent & laborious]{.fragment .semi-fade-out}   
+  * [Variations throughout industry pose uncertainty]{.fragment .semi-fade-out}
+  * [Sharing software with health authorities is a challenge]{.fragment .semi-fade-out}
+  * [Health authorities, overwhelmed by technical inconsistencies, are more likely to question software use]{.fragment .semi-fade-out}
+* We feel the most productive path forward is a shared ecosystem
+:::
+
+::: {.notes}
+- **inconsistent**: Vendored choices inevitably face inconsistency when
+  merged with internally developed tools
+- **sharing**: `pkglite`, `.R` files now permitted, Hosting on git repo/r-universe? But comes with extra install steps.
+- **laborious**: We're all reviewing the same tools, duplicating effort and
+:::
+
+
+## Work to-date
+
+**Building consensus in package evaluation and distribution...**
+
+0. Who needs a repository anyways?
+1. Stakeholder engagement [3mo]{.dim}  
+2. Product refinement and proof-of-concept planning [1mo]{.dim}
+3. POC development [2mo]{.dim}
+
+
+## ✋ Hold up! Why a repository?
+
+> "Every successful team starts with a small existential crisis"  
+>  -- _unknown_
+
+- Tools for building evaluation in-house?
+- Sharing of extra testing resources?
+- Curation of packages?
+- A stricter CRAN?
+
+
+## Embracing change
+
+:::: {.fragment}
+### Old dog, new trick
+
+::: {.inremental style="font-size: 0.8em;"}
+* Modern package ecosystems are the stats world's _new trick_
+* Methods are provided directly by statisticians and academics, rarely by vendors.
+* Risk is managed not by itemized requirements, but by good development practices.[^2]
+* We need to learn how to manage risk in a constantly evolving ecosystem
+:::
+
+[^2]: [_Computer Software Assurance for Production and Quality Systems Software: Draft Guidance for Industry and Food and Drug Administration Staff_](https://www.fda.gov/media/161521/download)
+
+::: {.notes}
+- **evolving**: 
+  - Patches constantly fixing edge cases. Neglect to update is a risk.
+  - Health authorities use latest CRAN. Differences
+    in their system and yours introduces risk of inconsistency in results.
+:::
+::::
+
+
+## Comparing Approaches
+
+```{=html}
+<style>
+.dense-list ul, .dense-list li {
+  margin-top: 0.1em !important;      
+  margin-bottom: 0.1em !important;
+}
+</style>
+```
+
+::::: {style="font-size: 0.7em;"}
+:::: {.columns .dense-list}
+::: {.column width="50%"}
+##### Vendored Stats Products
+:::
+::: {.column width="50%"}
+##### Data Science Ecosystem
+:::
+::::
+
+:::: {.columns .dense-list .fragment}
+::: {.column width="50%"}
+* Of-the-shelf [**cohort**]{style="color: green;"}.
+:::
+::: {.column width="50%"}
+* A "snapshot" of [**living repository**]{style="color: green"}.
+:::
+::::
+
+:::: {.columns .dense-list .fragment}
+::: {.column width="50%"}
+* Internal tools developed [**against cohort**]{style="color: color-mix(in lch, green 80%, red)"} 
+  packages.
+:::
+::: {.column width="50%"}
+* Internal tools developed [**against latest**]{style="color: green;"} 
+  packages.
+:::
+::::
+
+:::: {.columns .dense-list .fragment}
+::: {.column width="50%"}
+* New package versions [**risk incompatibility**]{style="color: color-mix(in lch, green 60%, red)"}.
+:::
+::: {.column width="50%"}
+* New packages can be [**reviewed and upgraded at-will**]{style="color: green;"}.
+:::
+::::
+
+:::: {.columns .dense-list .fragment}
+::: {.column width="50%"}
+* Steep [**upgrade cost (time, developement)**]{style="color: color-mix(in lch, green 40%, red)"}.
+:::
+::: {.column width="50%"}
+* Living ecosystem, constantly [**vetted against new releases**]{style="color: green;"}
+:::
+::::
+
+:::: {.columns .dense-list .fragment}
+::: {.column width="50%"}
+* [**System-specific mix of packages**]{style="color: color-mix(in lch, green 20%, red)"}.
+:::
+::: {.column width="50%"}
+* [**More likely what is used by HAs**]{style="color: green;"}
+:::
+::::
+
+:::: {.columns .dense-list .fragment}
+::: {.column width="50%"}
+* [**Tied to current validation expectations**]{style="color: color-mix(in lch, green 10%, red)"}.
+:::
+::: {.column width="50%"}
+* [**Adaptable as R best practices evolve**]{style="color: green;"}
+:::
+::::
+
+:::: {.center .dense-list .fragment style="margin: auto;"}
+[**Challenges shipping in-house code**]{style="color: color-mix(in lch, green 10%, red)"}.
+::::
+:::::
+
+
+## Interesting Stakeholder Findings
+
+- Health authority primary concerns
+  - Avoiding **security vulnerabilities** while using R
+  - Visible discussions **vetting methodology** and relevance
+- Industry validation leads
+  - Relieved that open-source tools are public, less need to audit
+    vendored tools
+- System administrators, users and developers
+  - Want **clarity** and **consistency** internally and externally
+
+
+## Prototyping
+
+Running three prototypes to explore specific needs
+
+- Test case exchange format ([repo](https://github.com/kkmann/rmes/pulls))
+- Communication channels for methods discussion & considerations ([google doc](https://docs.google.com/presentation/d/1b9VZjVM1pzzSmrO7WFKK43EjBZMT0smRrNY_0BPSR0s/edit#slide=id.g1e4f3a104ee_0_0))
+- Risk filters and transparency of known vulnerabilities ([repo](https://github.com/dgkf/rvalhub-repo-filters-mvp))
+
+
+## Prototyping
+### Test Case Exchange Format
+
+```json
+{
+  "rPackage": {
+    "name": "stats",
+    "link": "https://cran.r-project.org/package=stats"
+  },
+  "CSADocPkg": {
+    "function": {
+      "name": "t.test",
+      "assuranceActivity": {
+        "activityType": "Scripted Testing: Robust",
+        "definition": "Scripted testing efforts in which the risk of the computer system or automation includes evidence of repeatability, traceability to requirements, and auditability.",
+        "parameters": {
+          "testObjectives": [
+            {
+              "uuid": "6cde1b0f-3e41-4878-8cd5-79c87be88a7d",
+              "objective": "Verify that p values produced by stats::t.test are uniformly distributed",
+              "keywords": ["t.test", "p values", "uniform distribution"],
+              "testCases": [
+                {
+                  "uuid": "4fa03a8d-2e39-4866-9cd3-69b77bd78a6b",
+                  "testName": "t test produces calibrated p values",
+                  "description": "This test checks that the p values produced by stats::t.test do not deviate substantially from the expected uniform distribution.",
+                  "code": "set.seed(42)\\nm <- 100\\nfor (n in c(5, 50, 500)) {\\n# repeatedly sample data under null and record p value\\nres <- numeric(m)\\nfor (i in 1:m) {\\nres[i] <- t.test(rnorm(n))$p.value\\n}\\n# expect non significant result\\nexpect_true(\\nks.test(res, 'punif')$p.value > 0.05\\n)\\n}",
+                  "result": "pass",
+                  "environment": {
+                    "container": "rocker/tidyverse:4.3.1",
+                    "runtime": "singularity",
+                    "runtimeVersion": "3.8",
+                    "renvLockfile": ""
+                  }
+                }
+  ...
+```
+
+## Prototyping 
+### Communication Channels
+
+![](assets/rvalhub-comm-channels.svg)
+
+
+## Prototyping 
+### Package Security & Risk Filters
+
+```r
+install.packages("options")
+#> Security vulnerabilities found in packages to be installed.
+#> To proceed with installation, re-run with `accept_vulnerabilities = TRUE`
+#> 
+#> ── Vulnerability overview ──
+#> 
+#> ℹ 1 package was scanned
+#> ℹ 1 package was found in the Sonatype database
+#> ℹ 1 package had known vulnerability
+#> ℹ A total of 1 known vulnerability was identified
+#> ℹ See https://github.com/sonatype-nexus-community/oysteR/ for details.
+```
+
+```r
+nrow(available.packages())
+#> 5 "low risk" packages
+
+options(available_packages_filters = NULL)
+nrow(available.packages())
+#> 17 available packages
+```
+
+
+## A fork in the road
+
+Given the key capabilities and tools to address them. How do we bundle
+these solution to address industry needs?
+
+:::: {.columns style="font-size: 0.7em;"}
+::: {.column .fragment width="50%"}
+**Support our industry today**
+
+> _Delivering in-house solutions for you to pick-and-choose_
+
+- Consistent processes to apply
+- Local tools to deploy in-house
+- Community forum for knowledge sharing
+:::
+
+::: {.column .fragment width="50%"}
+**Build what we want the industry to be**
+
+> _Drive change through transparency and consistency_
+
+- Lead by example with a public solution
+- Make it easier to adopt than re-build
+- Transparency-first solutions
+:::
+::::
+
+
+## What does a solution look like? {visibility="hidden"}
+
+::: {.callout-note}
+## If it's not broke, don't fix it!
+:::
+
+::: {.incremental style="font-size: 0.8em;"}
+- R has this wonderful thing called CRAN, setting the standard of quality
+  - Packages are constantly tested together
+  - R has a culture of amazing documentation
+  - Statisticians flock to R, and are constantly vetting its implementations
+:::
+
+
+## What does a solution look like? {visibility="hidden"}
+::: {.callout-warning}
+## Fool me twice, shame on me
+:::
+
+::: {.incremental style="font-size: 0.8em;"}
+- R has this thorn in its side called CRAN, 
+  - Builds are difficult to reproduce (key for validation)
+  - Quality indicators are lacking
+  - Difficult to roll back to an older snapshot (although tools exist to help with this.)
+  - Governance isn't always the most friendly
+:::
+
+
+## What does a solution look like?
+
+::: {.callout-tip}
+## Closing the CRAN gap for the Pharma Use Case
+:::
+
+- Reproducibility guidelines
+- Standard, public assessment of packages
+- Avenues for communicating about implementations, bugs, security
+
+
+## The Proposal so Far
+
+![](assets/repository-diagram.svg){.r-stretch .center style="display: block; margin: auto"}
+
+## 🧗 "Leaps of Faith"
+
+```{=html}
+<style>
+.highlight {
+  color: var(--r-heading-color);
+}
+</style>
+```
+
+- [***A "Golden" Base Image***]{.highlight}  
+  to establish ground truth for testing.
+- [***Rethinking requirements***]{.highlight}  
+  testing, external vetting (CRAN) and adoption are sufficient for _Scripted 
+  Testing_ needs - are new requirements necessary?  
+- [***Expectations of Public Communication***]{.highlight}  
+  industry-standard communication channels.
+- [***Nearly all meaningful assessment can be automated***]{.highlight}  
+  edge cases (malicious code, methods debate) are better handled by 
+  transparent community engagement.
+
+## The Proposal so Far
+
+![](assets/repository-diagram.svg){.r-stretch .center style="display: block; margin: auto"}
+
+## 🧗 "Leaps of Faith" Discussion
+
+```{=html}
+<style>
+.highlight {
+  color: var(--r-heading-color);
+}
+</style>
+```
+
+::: {style="font-size: 0.8em"}
+> How would your operations change if the industry adopted...
+
+- [***A "Golden" Base Image***]{.highlight}  
+  to establish ground truth for testing.
+- [***Rethinking requirements***]{.highlight}  
+  testing, external vetting (CRAN) and adoption are sufficient for _Scripted 
+  Testing_ needs - are new requirements necessary?  
+- [***Expectations of Public Communication***]{.highlight}  
+  industry-standard communication channels.
+- [***Nearly all meaningful assessment can be automated***]{.highlight}  
+  edge cases (malicious code, methods debate) are better handled by 
+  transparent community engagement.
+:::

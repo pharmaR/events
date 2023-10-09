@@ -1,0 +1,51 @@
+---
+title: "R Validation Hub"
+subtitle: "Status Report & Workshop"
+author:
+ - Doug Kelkhoff
+ - _on behalf of the R Validation Hub team_
+date: 09/18/2023
+---
+
+# Slides Available!
+
+[pharmar.github.io/events-positconf2023](https://pharmar.github.io/events-positconf2023)
+
+{{< include _r_val_hub_intro.qmd >}}
+
+# 🗓️ Agenda
+
+```{=html}
+<style>
+.dim {
+  font-style: italic;
+  font-weight: bold;
+  opacity: 0.35;  
+  margin: 0 0.5em;
+}
+
+.small {
+  font-size: 0.8em;
+}
+</style>
+```
+-   Introducion [5min]{.dim}
+-   Updates [5min]{.dim}
+-   Established Workstream Recap [10min]{.dim}\
+    *past*, *present* & *future*
+-   Repositories Workstream [10min]{.dim}
+
+{{< include _r_val_hub_updates.qmd >}}
+
+# Closing
+
+Thank you for your engagement!
+
+::: columns
+::: {.column width="30%"}
+:::
+
+::: {.column width="60%"}
+*We're excited to champion new ways of working that bring Pharma's together.*
+:::
+:::
