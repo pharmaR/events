@@ -1,5 +1,15 @@
 # List of conferences / events for 2023 and status
 
+## R/Pharma 2023
+
+Status: Accepted 20min talk
+
+Title: “Updates from the R Validation Hub: Toward a Pharma Repository”
+
+Authors: Juliane Manitz and Coline Zeballos
+
+Time: Tuesday Oct 25, 11.40-12 ET
+
 ## posit::conf(2023)
 
 Sept 17-20, Chicago
