@@ -18,14 +18,6 @@ status: abstract submitted
 
 https://posit.co/conference/
 
-## R/Pharma
-
-Oct 24-26, virtual
-
-status: nominated.
-
-https://rinpharma.com/post/2023-03-17-announcement/
-
 ## R Adoption series 2023
 
 March 30th, 2023
