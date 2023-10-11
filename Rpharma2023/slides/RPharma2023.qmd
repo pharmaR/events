@@ -2,9 +2,9 @@
 title: "R Validation Hub"
 subtitle: "Status Report & Workshop"
 author:
- - Doug Kelkhoff
+ - Juliane Manitz and Coline Zeballos
  - _on behalf of the R Validation Hub team_
-date: 09/18/2023
+date: 10/25/2023
 ---
 
 # Slides Available!
@@ -29,11 +29,10 @@ date: 09/18/2023
 }
 </style>
 ```
--   Introducion [5min]{.dim}
--   Updates [5min]{.dim}
--   Established Workstream Recap [10min]{.dim}\
+-   Introduction [5 min]{.dim}
+-   Established Workstream Updates [5 min]{.dim}\
     *past*, *present* & *future*
--   Repositories Workstream [10min]{.dim}
+-   Repositories Workstream [10 min]{.dim}
 
 {{< include _r_val_hub_updates.qmd >}}
 

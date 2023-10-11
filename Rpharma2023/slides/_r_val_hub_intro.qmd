@@ -59,6 +59,11 @@
 > organizations developing, maintaining, distributing and using R software
 :::
 
+* The R Validation Hub
+* R Submission Working Group
+* R Repositories Working Group (ie CRAN enhancements, future development)
+
+
 ## 🤝 Affiliates: ![](assets/camis.png){height="1.2em" width="1.2em" style="margin: 0 0.2em; border-radius: 50%; object-fit: cover; background: #CBC; vertical-align: middle;"} PSI/AIMS (CAMIS) {transition="slide-in slide-out"}
 
 ::::: {.columns}
@@ -79,17 +84,7 @@
   learn how you can get involved!
 :::
 ::::
-
-## 🤝 Affiliates: ![](assets/r-consortium.png){height="1.2em" style="padding: 0.2em; margin: 0 0.5em 0 0; border-radius: 0.8em; background: #FFF; vertical-align: middle;"} [R Consortium]{.hidden} {transition="slide-in slide-out"}
-
-::: {style="font-size: 0.7em"}
-> Works with and provides support to the R Foundation and to the key
-> organizations developing, maintaining, distributing and using R software
-:::
-
-* The R Validation Hub
-* R Submission Working Group
-* R Repositories Working Group (ie CRAN enhancements, future development)
+:::::
 
 ## 👷‍♂️ What We Do ([pharmaR.org](https://www.pharmaR.org)) {transition="slide-in slide-out"}
 
@@ -99,6 +94,10 @@
 :::: {.column width="29%" .panel}
 #### White Paper
 Guidance on compliant use of R and management of packages
+
+::: {.person}
+Andy Nicholls et al.
+:::
 ::::
 
 :::: {.column width="29%" .panel}
