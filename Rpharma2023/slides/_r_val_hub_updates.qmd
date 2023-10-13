@@ -10,8 +10,6 @@ editor:
 
 > If nothing else, take this home!
 
-<!--
-
 -   The FDA appears to accept `.R` files through their eSUB portal[^1] .
 -   The FDA has released a draft of a new *Computer Software
     Assurance*[^2] guideline that seems to be increasingly the basis for
@@ -23,8 +21,6 @@ editor:
 [^2]: [*Computer Software Assurance for Production and Quality Systems
     Software: Draft Guidance for Industry and Food and Drug
     Administration Staff*](https://www.fda.gov/media/161521/download)
-
--->
 
 ## Change of Leadership
 
