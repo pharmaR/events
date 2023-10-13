@@ -1,6 +1,6 @@
 ---
 title: "R Validation Hub"
-subtitle: "Status Report & Workshop"
+subtitle: "Updates & Pharma Repository"
 author:
  - Juliane Manitz and Coline Zeballos
  - _on behalf of the R Validation Hub team_
@@ -23,16 +23,17 @@ date: 10/25/2023
 }
 </style>
 ```
+
 -   Introduction & Updates[10 min; Juliane Manitz]{.dim}\
     *past*, *present* & *future*
--   Repositories Workstream [10 min; Coline Zeballos]{.dim}
+-   Repositories Workstream [10 min; Coline Zeballos]{.dim}\
 
-### Slides Available!
+Slides Available!
 
 [pharmar.github.io/events-positconf2023](https://pharmar.github.io/events-positconf2023)
 
 # 👋 Who We Are {transition="none-in slide-out"}
- ![](assets/r-consortium.png){height="1.2em" style="padding: 0.2em; margin: 0 0.5em 0 0; border-radius: 0.8em; background: #FFF; vertical-align: middle;"} [R Consortium]{.hidden} {transition="slide-in slide-out"}
+
 ```{=html}
 <style>
 .panel {
@@ -79,17 +80,14 @@ date: 10/25/2023
 > within a biopharmaceutical regulatory setting ([pharmaR.org](https://www.pharmaR.org))
 :::
 
-* Grew out of **R/Pharma 2018**
+* R Consortium Working Group which grew out of **R/Pharma 2018**
 * Led by participants from **~10 organizations**
-* R Consortium Working Group
-* With frequent involvement from health authorities (primarily the FDA)
+* With frequent involvement from health authorities
 * And subscribers from **~60 organizations** spanning multiple industries
 
 * New R validation hub lead is Doug Kelkhoff
 
 ## 👷‍♂️ What We Do ([pharmaR.org](https://www.pharmaR.org)) {transition="slide-in slide-out"}
-
-<!-- ### Products {.center} -->
 
 ::::: {.columns}
 :::: {.column width="29%" .panel}
@@ -155,38 +153,9 @@ Aaron Clark
 ::::
 :::::
 
-<!-- ## 🤝 Affiliates: ![](assets/r-consortium.png){height="1.2em" style="padding: 0.2em; margin: 0 0.5em 0 0; border-radius: 0.8em; background: #FFF; vertical-align: middle;"} [R Consortium]{.hidden} {transition="slide-in slide-out"} -->
-
-<!-- ::: {style="font-size: 0.7em"} -->
-<!-- > Works with and provides support to the R Foundation and to the key -->
-<!-- > organizations developing, maintaining, distributing and using R software -->
-<!-- ::: -->
-
-<!-- * The R Validation Hub -->
-<!-- * R Submission Working Group -->
-<!-- * R Repositories Working Group (ie CRAN enhancements, future development) -->
-
-
-<!-- Updates ---------------------------------------------------------------------->
-
+<!-- Updates -------------------------------------------------------------------- -->
 
 # 📣 Updates {transition="slide-in none"}
-
-<!-- ## Change of Leadership -->
-
-<!-- -   We thank Andy for his leadership and enthusiasm that brought the R -->
-<!--     Validation Hub to this point. -->
-<!-- -   New R validation hub lead is Doug Kelkhoff -->
-
-<!-- ### Pulse Check -->
-
-<!-- <!-- - We looked back on how we had been working --> -->
-
-<!-- -   Identified new opportunities -->
-<!--     1.  Refining holistic strategic direction -->
-<!--     2.  Be mindful about communication and organization -->
-<!-- -   We have a new Communication workstream! (and awesome new slides!) -->
-<!-- -   More ways to get involved -->
 
 ## 🗝 Key Policy Updates!
 
@@ -214,10 +183,9 @@ Aaron Clark
 :::
 
 ::: { style="font-size: 0.7em;" }
-- Released a [white paper](https://phuse.s3.eu-central-1.amazonaws.com/Deliverables/Data+Visualisation+%26+Open+Source+Technology/WP077.pdf) providing guidance on appropriate use of stats methods
-<!-- , for example: -->
-<!--   * Don't default to the defaults -->
-<!--   * Be specific when drafting analysis plans, including precise methods & options -->
+- Released a [white paper](https://phuse.s3.eu-central-1.amazonaws.com/Deliverables/Data+Visualisation+%26+Open+Source+Technology/WP077.pdf) providing guidance on appropriate use of stats methods, for example: 
+   * Don't default to the defaults
+   * Be specific when drafting analysis plans, including precise methods & options 
 - Currently building a repository of methods comparisons at 
   [psiaims.github.io/CAMIS](https://psiaims.github.io/CAMIS/).
 - Check out their 
@@ -225,7 +193,12 @@ Aaron Clark
   learn how you can get involved!
 :::
 ::::
+
+:::: {.column width="35%"}
+![](assets/CAMIS-white-paper.png)
+::::
 :::::
+
 
 # 📜 Workstream Report
 
@@ -547,11 +520,9 @@ these solution to address industry needs?
 
 
 
-# Closing
+# Join the R validation Hub! 
 
-Join the [R validation Hub](https://www.pharmar.org/contribute/)! 
-
-* Get on the Mailing List
+* Get on the [Mailing List](https://www.pharmar.org/contribute/)
 * Contribute to a Working Group
 * Help with the {riskmetric} R Package or the The Risk Assessment Application
 
