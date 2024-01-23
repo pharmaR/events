@@ -1,0 +1,13 @@
+
+
+Title: Risk-assessment of R packages in a Biopharmaceutical Regulatory Setting. 
+
+Authors: Juliane Manitz, Antal Martinecz and Doug Kelkhoff on behalf of the R Validation Hub
+
+This contribution reflects on framework and tools by the R Validation Hub for risk-based assessment of R packages within a validated infrastructure. 
+The R Validation Hub is a cross-industry initiative funded by the R Consortium, that to supports the adoption of R within a biopharmaceutical regulatory setting. 
+We will discuss the framework for the risk-based assessment of R packages, that has been utilized by key pharma companies across the industry. 
+We also showcase the {riskmetric} R package, that evaluates the risk of an R package using a specified set of metrics and validation criteria, and 
+the {riskassessment} app, that augments the utility of the {riskmetric} package within a Shiny app front end. 
+Lastly, we will outline a prototype of a technical framework for a 'repository' of R packages with accompanying evidence of their quality and the assessment criteria. 
+Although, our work has mostly focused in biopharmaceutical, it may also be relevant in other regulated areas such as financial service industries and agriculture.
