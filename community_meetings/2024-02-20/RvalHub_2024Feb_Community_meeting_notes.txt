@@ -1,0 +1,49 @@
+﻿R Validation Hub - February Community Meeting Notes
+________________
+
+
+Breakout room (Jaxon)
+* Couple of folks working for CROs in breakout room
+* Mainly SAS users but also some R users; some R users just beginning their journey
+* R environments not really yet in PROD level environment and more of a tag along language used in addition to SAS/STATA/SPSS
+* Using {riskmetric} and {riskassessment} produces candidates for validation rather than being validated immediately the package/application
+* Validation means testing and the other but is more introducing candidates
+* Many say reproducibility is the main characteristic used to consider something validated
+* One person from the group tries to use same version of a package consistently and update in March of every year; they also may change their version to “best” that’s working that year
+* For those still in beginning stages of an R environment, they are considering base R with other packages; depends on what you’re trying to do whether it be modeling, analysis, or cleaning
+* To feel the most comfortable moving from SAS to R, coverage using {testthat} helps; hard to feel that every functionality is covered between languages for a given package, but easier to be assured that things work as expected with unit tests
+* Validation of base R
+   * Is this something we need to validate given it has its own statistical methods? 
+   * Do we inherently trust base R?
+   * Potential paper written on this
+
+
+Larger Group Discussion
+* Words discussed (validity, reliability, trust) seem to all be similarly related to “risk”
+* Validated in technical sense
+   * FDA idea of validation, meaning that some system does what it is supposed to do
+   * Idea of validated R package means it does what it’s supposed to do
+      * Does the package give the right answer?
+* Really important and imperative for any company that is using R to decide and document for themselves what they take validation to mean
+   * An idea is to start from what R Validation Hub does and then form opinion based on company’s definition of risk
+* Split definitions of qualification and validation
+   * Low risk package is something that has a lot of bug fixes and is actively developed
+      * “We’re ‘qualifying’ this package”; something automated like pharmaverse packages
+   * Higher risk packages that we are not as happy/comfortable with to qualify right away
+      * Move onto validation to work more closely with results of package
+   * Cannot validate every function in every package
+      * At what level do we consider something validated, then (package, function, etc.)?
+* In the end, it’s your company’s responsibility to define “validation”
+   * Create a benchmark and compare between each other
+   * Create rules that we all understand
+* Backwards compatibility is a big issue (new version breaking functions); diffify.com (interfaces of functions compared to older versions)
+* Dependencies increase risk the more that are added
+* Validation is not about the “correct” answer, as the right answer from stats can have a lot of contention
+   * Reframe this as “expectations” rather than “correct answers”
+* CAMIS - Comparing Analysis Method Implementations in Software
+* Does discrepancy matter to you, and do you know what the answer should be in this circumstance with a tolerance that you accept?
+* How do we validate the smaller functions in a package? 
+   * This is in scope of needed to upversion at the cost of breaking changes/deprecated functions for a package
+      * Do we just stay on an older version instead?
+* Consideration of “adding a ‘stamp’” from a company considering a package/function being validated
+   * Controversial, as some folks in call mentioned their company would likely be unwilling to contribute something like that
