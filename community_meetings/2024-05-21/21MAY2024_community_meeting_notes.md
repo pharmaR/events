@@ -8,11 +8,11 @@
 
 🔗 Relevant Links
 
--   LinkedIn Post:
+-   LinkedIn Post: https://www.linkedin.com/feed/update/urn:li:activity:7196255522990313472
 
--   Blog Post:
+-   Blog Post: https://www.r-consortium.org/blog/2024/05/14/tackling-hurdles-embracing-open-source-packages-in-pharmaceutical-research 
 
--   Slide Deck:
+-   Slide Deck: https://github.com/pharmaR/events/blob/main/community_meetings/2024-05-21/RvalHub_2024May_Community_meeting.pdf
 
 ## 🗒️ Meeting Notes
 
